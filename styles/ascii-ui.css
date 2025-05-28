@@ -24,10 +24,20 @@ body.ascii-ui.dark {
   color: #ccc;
 }
 
+/* FIX: Show header and controls even in ASCII */
+body.ascii-ui footer {
+  display: none;
+}
+
 body.ascii-ui header,
-body.ascii-ui footer,
 body.ascii-ui #uiControls {
-  display: none; /* Strip out modern UI panels */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  justify-content: space-between;
+  background: #111;
+  border-bottom: 1px solid #333;
 }
 
 body.ascii-ui main,
