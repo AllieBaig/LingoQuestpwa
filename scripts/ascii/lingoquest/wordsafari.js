@@ -1,54 +1,38 @@
-
 /**
- * ASCII Word Safari — Text-only fallback for category-based MCQ game
- * Presents a category and asks the player to select the right word
- * Uses: #sentenceClue, #sentenceBuilderArea, #resultSummary, #xpTracker
- * Depends on: questionPool.js, mcqAutoCheck.js, xpTracker.js
- * Related JSON: lang/wordsafari-*.json
+ * ASCII Word Safari — Category-based MCQ animal hunt (text mode)
+ * Uses asciiRenderer for all clue/MCQ/summary rendering
  * MIT License: https://github.com/AllieBaig/LingoQuest/blob/main/LICENSE
- * Timestamp: 2025-05-28 16:20 | File: scripts/ascii/lingoquest/wordsafari.js
+ * Timestamp: 2025-05-28 19:55 | File: scripts/ascii/lingoquest/wordsafari.js
  */
 
 import { loadQuestionsForMode } from '../../utils/questionPool.js';
-import { setupMCQ } from '../../utils/mcqAutoCheck.js';
+import { renderClue, renderMCQ, renderSummary } from '../../utils/asciiRenderer.js';
 import { awardXP } from '../../utils/xpTracker.js';
 
 export async function initAsciiWordSafari(lang = 'fr') {
-  const clueEl = document.querySelector('#sentenceClue');
-  const builderEl = document.querySelector('#sentenceBuilderArea');
-  const resultEl = document.querySelector('#resultSummary');
-
-  clueEl.textContent = '[🦁 ASCII SAFARI] Match the correct word:';
-  builderEl.innerHTML = '';
-  resultEl.textContent = '';
-
   const questions = await loadQuestionsForMode('wordsafari', lang);
   let index = 0;
 
   function next() {
     if (index >= questions.length) {
-      resultEl.textContent = '[✔] Safari complete!';
+      renderSummary('[🏁] Safari terminé !');
       return;
     }
 
     const q = questions[index];
-    clueEl.textContent = `[Category ${index + 1}] ${q.category}`;
-    builderEl.innerHTML = '';
+    renderClue(`🌿 Catégorie: ${q.category}`);
 
-    setupMCQ(q.options, q.answer, builderEl, (correct) => {
-      if (correct) {
-        resultEl.textContent = '[+] Correct! +10 XP';
-        awardXP(10);
-      } else {
-        resultEl.textContent = '[-] Incorrect!';
-      }
+    renderMCQ(q.options, q.answer, (correct) => {
+      renderSummary(correct ? '[🦁] Bien joué ! +10 XP' : '[❌] Mauvaise réponse.');
+      if (correct) awardXP(10);
       index++;
       setTimeout(() => {
-        resultEl.textContent = '';
+        renderSummary('');
         next();
-      }, 1400);
+      }, 1600);
     });
   }
 
   next();
 }
+
