@@ -76,6 +76,23 @@ async function loadGameMode(mode, lang, ui) {
   }
 }
 
+// If no mode is passed, show the game selector
+if (!params.has('mode')) {
+  document.querySelector('#modeSelectorPanel')?.classList.remove('hidden');
+  const buttons = document.querySelectorAll('#modeSelectorPanel button');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const selectedMode = btn.dataset.mode;
+      const selectedLang = btn.dataset.lang;
+      const targetUrl = `?mode=${selectedMode}&lang=${selectedLang}&ui=${ui}`;
+      location.href = targetUrl;
+    });
+  });
+} else {
+  loadGameMode(mode, lang, ui); // ⬅ keep this line as-is
+}
+
+
 // Run it!
 loadGameMode(mode, lang, ui);
 
