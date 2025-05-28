@@ -1,56 +1,36 @@
-
 /**
- * ASCII MixLingo — Minimal UI fallback for multilingual word swap.
- * Replaces a blank in an English sentence with foreign MCQ options.
- * Uses: #sentenceClue, #sentenceBuilderArea, #resultSummary, #xpTracker
- * Depends on: questionPool.js, mcqAutoCheck.js, xpTracker.js
- * Related JSON: lang/mixlingo-*.json
+ * ASCII MixLingo — Multilingual MCQ with one word missing
+ * Uses shared asciiRenderer for text-mode rendering
  * MIT License: https://github.com/AllieBaig/LingoQuest/blob/main/LICENSE
- * Timestamp: 2025-05-28 14:18 | File: scripts/ascii/lingoquest/mixlingo.js
+ * Timestamp: 2025-05-28 19:45 | File: scripts/ascii/lingoquest/mixlingo.js
  */
 
 import { loadQuestionsForMode } from '../../utils/questionPool.js';
-import { setupMCQ } from '../../utils/mcqAutoCheck.js';
+import { renderClue, renderMCQ, renderSummary } from '../../utils/asciiRenderer.js';
 import { awardXP } from '../../utils/xpTracker.js';
 
 export async function initAsciiMixLingo(lang = 'fr') {
-  const clueEl = document.querySelector('#sentenceClue');
-  const builderEl = document.querySelector('#sentenceBuilderArea');
-  const resultEl = document.querySelector('#resultSummary');
-
-  clueEl.textContent = '[🌍 ASCII MIXLINGO] Choose the correct word:';
-  builderEl.innerHTML = '';
-  resultEl.textContent = '';
-
   const questions = await loadQuestionsForMode('mixlingo', lang);
-  let index = 0;
-
-  function formatSentence(q) {
-    return q.sentence.replace('____', '____');
-  }
+  let current = 0;
 
   function next() {
-    if (index >= questions.length) {
-      resultEl.textContent = '[✔] You’ve completed all MixLingo challenges!';
+    if (current >= questions.length) {
+      renderSummary('[🏁] MixLingo complete!');
       return;
     }
 
-    const q = questions[index];
-    clueEl.textContent = `[ Sentence ${index + 1} ]  ${formatSentence(q)}`;
-    builderEl.innerHTML = '';
+    const q = questions[current];
+    const sentence = q.sentence.replace(q.blank, '____');
+    renderClue(sentence);
 
-    setupMCQ(q.options, q.answer, builderEl, (correct) => {
-      if (correct) {
-        resultEl.textContent = '[+] Bravo! You earned 10 XP!';
-        awardXP(10);
-      } else {
-        resultEl.textContent = '[-] Oops! Wrong word.';
-      }
-      index++;
+    renderMCQ(q.options, q.answer, (correct) => {
+      renderSummary(correct ? '[+] Correct! +10 XP' : '[-] Incorrect.');
+      if (correct) awardXP(10);
+      current++;
       setTimeout(() => {
-        resultEl.textContent = '';
+        renderSummary('');
         next();
-      }, 1400);
+      }, 1600);
     });
   }
 
