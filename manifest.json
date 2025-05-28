@@ -1,8 +1,7 @@
-
 {
   "name": "LingoQuest",
-  "short_name": "LingoQuest",
-  "start_url": "/index.html",
+  "short_name": "pwaLingoQuest",
+  "start_url": "/pwaLingoQuest/index.html?source=homescreen",
   "display": "standalone",
   "theme_color": "#4a90e2",
   "background_color": "#ffffff",
