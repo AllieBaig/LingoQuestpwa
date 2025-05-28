@@ -1,176 +1,136 @@
-/**
- * Minimal UI Styles for LingoQuestPWA
- * Supports light/dark mode, button scaling, and clean layout
- * MIT License: https://github.com/AllieBaig/LingoQuest/blob/main/LICENSE
- * Timestamp: 2025-05-28 21:00 | File: styles/minimal-ui.css
- */
-
-
-/* Light mode defaults */
-body.minimal-ui:not(.dark) {
-  background-color: #f9f9f9;
-  color: #111;
-}
-
-body.minimal-ui:not(.dark) header#uiControls,
-body.minimal-ui:not(.dark) #asciiSettingsPanel {
-  background-color: #fff;
-  color: #000;
-  border-bottom: 1px solid #ccc;
-}
-
-body.minimal-ui:not(.dark) select,
-body.minimal-ui:not(.dark) button {
-  background-color: #fff;
-  color: #000;
-  border: 1px solid #aaa;
-}
-
-body.minimal-ui:not(.dark) #sentenceClue,
-body.minimal-ui:not(.dark) #sentenceBuilderArea,
-body.minimal-ui:not(.dark) #resultSummary {
-  background-color: #ffffff;
-  color: #111;
-  border: 1px solid #ccc;
-}
-
-
+/* === Minimal UI CSS for LingoQuestPWA === */
+/* MIT License: https://github.com/AllieBaig/LingoQuest/blob/main/LICENSE */
+/* Timestamp: 2025-05-28 23:50 */
 
 body.minimal-ui {
   font-family: system-ui, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f9f9f9;
-  color: #111;
+  background-color: var(--bg-color, #ffffff);
+  color: var(--text-color, #111111);
+  transition: background 0.3s, color 0.3s;
+  font-size: var(--font-scale, 1rem);
 }
 
 body.minimal-ui.dark {
-  background: #121212;
-  color: #eee;
+  --bg-color: #111111;
+  --text-color: #eeeeee;
 }
 
-header#uiControls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: center;
-  padding: 0.5rem 1rem;
-  background: var(--panel-bg, #eaeaea);
-  border-bottom: 1px solid #ccc;
-}
-
-body.minimal-ui.dark header#uiControls {
-  background: #1e1e1e;
-  border-bottom: 1px solid #444;
-}
-
-#asciiSettingsPanel {
-  padding: 0.5rem;
-  text-align: center;
-  font-family: monospace;
-  background: #111;
-  color: #ccc;
-}
-
-main#gameArea {
+body.minimal-ui .game-container {
   padding: 1rem;
-  max-width: 700px;
-  margin: 0 auto;
+  max-width: 680px;
+  margin: auto;
 }
 
-#sentenceClue,
-#sentenceBuilderArea,
-#resultSummary {
-  padding: 0.8rem;
-  margin: 0.8rem 0;
-  border-radius: 8px;
-  background: #fff;
-  color: #111;
-  border: 1px solid #ccc;
-  font-family: monospace;
-  white-space: pre-wrap;
+body.minimal-ui header,
+body.minimal-ui footer {
+  text-align: center;
+  padding: 0.75rem;
+  font-weight: 600;
 }
 
-body.minimal-ui.dark #sentenceClue,
-body.minimal-ui.dark #sentenceBuilderArea,
-body.minimal-ui.dark #resultSummary {
-  background: #1e1e1e;
-  color: #ccc;
-  border: 1px solid #333;
-}
-
-.mcq-option {
-  display: block;
-  width: 100%;
-  margin: 0.4rem 0;
-  padding: 0.6rem 1rem;
+.game-button,
+button {
   font-size: 1rem;
-  font-family: inherit;
-  background: #eee;
-  border: 1px solid #aaa;
-  border-radius: 6px;
+  padding: 0.7rem 1.2rem;
+  border: 2px solid #333;
+  background: #f0f0f0;
+  color: #111;
+  margin: 0.3rem;
+  border-radius: 0.4rem;
   cursor: pointer;
-  text-align: left;
   transition: background 0.2s;
 }
 
-body.minimal-ui.dark .mcq-option {
-  background: #222;
-  border: 1px solid #444;
-  color: #ddd;
+button:hover {
+  background: #ddd;
 }
 
-.mcq-option.correct {
-  background: #c0ffc0 !important;
-  border-color: green !important;
+/* XP bar */
+#xpTracker {
+  height: 8px;
+  background: #ccc;
+  margin-top: 1rem;
+  position: relative;
 }
-.mcq-option.wrong {
-  background: #ffc0c0 !important;
-  border-color: red !important;
-}
-
-/* 🔠 Button Size Classes */
-body.btn-md .mcq-option {
-  font-size: 1em;
-  padding: 0.5rem 0.8rem;
-}
-
-body.btn-lg .mcq-option {
-  font-size: 1.25em;
-  padding: 0.6rem 1rem;
+#xpBar {
+  height: 100%;
+  background: #00b894;
+  width: 0%;
+  transition: width 0.4s ease-in-out;
 }
 
-body.btn-xl .mcq-option {
-  font-size: 1.5em;
-  padding: 0.75rem 1.2rem;
-}
-
-body.btn-xxl .mcq-option {
-  font-size: 1.75em;
-  padding: 1rem 1.5rem;
-}
-
-/* Dropdown Styling */
-select,
-button {
-  font-size: 0.95rem;
-  padding: 0.4rem 0.6rem;
-  border-radius: 4px;
-  border: 1px solid #aaa;
-  font-family: inherit;
-}
-
-body.minimal-ui.dark select,
-body.minimal-ui.dark button {
-  background: #222;
-  color: #eee;
-  border: 1px solid #444;
-}
-
-#uiModeBadge {
-  margin-top: 0.5rem;
+/* Result summary block */
+#resultSummary {
+  margin: 1rem auto;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 500;
   text-align: center;
-  font-family: monospace;
-  font-size: 0.9rem;
-  color: #888;
+}
+
+/* Font scaling (shared via JS + slider) */
+body.font-large {
+  --font-scale: 1.25rem;
+}
+body.font-xlarge {
+  --font-scale: 1.45rem;
+}
+body.font-xxlarge {
+  --font-scale: 1.65rem;
+}
+
+/* Button scaling toggle */
+body.scale-buttons .game-button,
+body.scale-buttons button {
+  font-size: 1.25rem;
+  padding: 1rem 1.4rem;
+}
+
+/* Language and UI dropdowns */
+select {
+  font-size: 1rem;
+  padding: 0.5rem;
+  margin: 0.3rem;
+  border-radius: 0.4rem;
+  border: 1px solid #ccc;
+}
+
+/* Theme: Lunar New Year */
+body.minimal-ui.theme-lunar {
+  --bg-color: #fff8f0;
+  --text-color: #330000;
+  --accent-color: #b80000;
+  --button-bg: #ffcccc;
+  --button-text: #330000;
+  --highlight-color: #ff5959;
+}
+body.minimal-ui.theme-lunar button {
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: 2px solid var(--accent-color);
+}
+body.minimal-ui.theme-lunar button:hover {
+  background: var(--highlight-color);
+  color: white;
+}
+
+/* Theme: Bastille Day */
+body.minimal-ui.theme-bastille {
+  --bg-color: #f9f9ff;
+  --text-color: #1a1a40;
+  --accent-color: #002f6c;
+  --button-bg: #e6f0ff;
+  --button-text: #002f6c;
+  --highlight-color: #d90429;
+}
+body.minimal-ui.theme-bastille button {
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: 2px solid var(--accent-color);
+}
+body.minimal-ui.theme-bastille button:hover {
+  background: var(--highlight-color);
+  color: white;
 }
