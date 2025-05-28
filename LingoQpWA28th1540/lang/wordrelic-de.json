@@ -1,0 +1,128 @@
+
+[
+  {
+    "clue": "👑🐝💡👶",
+    "answer": "bienenkönigin",
+    "options": ["bienenkönigin", "lichtbiene", "königsbaby", "babybiene"]
+  },
+  {
+    "clue": "🌍🔥🚫🧊",
+    "answer": "erderwärmung",
+    "options": ["erderwärmung", "abkühlung", "eiszeit", "feuerwelt"]
+  },
+  {
+    "clue": "📚🧠⚡🎓",
+    "answer": "wissen",
+    "options": ["wissen", "hirnkraft", "schulblitz", "lernlicht"]
+  },
+  {
+    "clue": "🎯🧭🔍🏹",
+    "answer": "fokus",
+    "options": ["fokus", "ziel", "jagd", "spurpfeil"]
+  },
+  {
+    "clue": "🔒❤️🗝️🤫",
+    "answer": "geheimeliebe",
+    "options": ["geheimeliebe", "herzschloss", "verstecktesverlangen", "verboten"]
+  },
+  {
+    "clue": "💤📦📬📮",
+    "answer": "traumbox",
+    "options": ["traumbox", "nachtpost", "schlafpaket", "traumpaket"]
+  },
+  {
+    "clue": "👟🕒🏃‍♂️📍",
+    "answer": "abgabetermin",
+    "options": ["abgabetermin", "zeitziel", "laufpunkt", "zieluhr"]
+  },
+  {
+    "clue": "🕵️‍♂️🎭💭🧩",
+    "answer": "rätsel",
+    "options": ["rätsel", "detektiv", "geheimmaske", "puzzlegeist"]
+  },
+  {
+    "clue": "🎸🔥🕺🎤",
+    "answer": "rockstar",
+    "options": ["rockstar", "musikfeuer", "bühnetanz", "gesangsflamme"]
+  },
+  {
+    "clue": "🌙🚀🛸🪐",
+    "answer": "weltraumreise",
+    "options": ["weltraumreise", "mondflug", "alienfahrt", "planetentour"]
+  },
+  {
+    "clue": "⏰😴🐓🌅",
+    "answer": "morgen",
+    "options": ["morgen", "aufwachen", "hahnruf", "tagesbeginn"]
+  },
+  {
+    "clue": "🐉🔥🏰⚔️",
+    "answer": "drachenkampf",
+    "options": ["drachenkampf", "burgfeuer", "schwertbiest", "epischereise"]
+  },
+  {
+    "clue": "🌪️🚪👻🎃",
+    "answer": "spukhaus",
+    "options": ["spukhaus", "geistersturm", "gruseltür", "kürbisraum"]
+  },
+  {
+    "clue": "🌧️🌊🚢⚓",
+    "answer": "seesturm",
+    "options": ["seesturm", "regenboot", "ozeanwut", "schiffsunglück"]
+  },
+  {
+    "clue": "🌲🧭🚶‍♂️🥾",
+    "answer": "abenteuer",
+    "options": ["abenteuer", "waldmarsch", "wildkarte", "wanderpfad"]
+  },
+  {
+    "clue": "🐦📢🎶🎼",
+    "answer": "singvogel",
+    "options": ["singvogel", "liedruf", "musikvogel", "klangfeder"]
+  },
+  {
+    "clue": "🎮👾👨‍💻🧠",
+    "answer": "spielergeist",
+    "options": ["spielergeist", "gamehirn", "coderzocker", "neuronenkontrolle"]
+  },
+  {
+    "clue": "🌸👁️🧘‍♂️💫",
+    "answer": "zengeist",
+    "options": ["zengeist", "ruhefokus", "blütenseele", "meditation"]
+  },
+  {
+    "clue": "👶💡🌱📈",
+    "answer": "wachstum",
+    "options": ["wachstum", "babyidee", "keimlicht", "entwicklung"]
+  },
+  {
+    "clue": "📅🕓🚀🎯",
+    "answer": "starttermin",
+    "options": ["starttermin", "kalenderstart", "zielzeit", "missionstart"]
+  },
+  {
+    "clue": "👓📖💭💬",
+    "answer": "lesekompetenz",
+    "options": ["lesekompetenz", "denktext", "büchergedanken", "wortwissen"]
+  },
+  {
+    "clue": "🧊💔🔥🌪️",
+    "answer": "gefühle",
+    "options": ["gefühle", "herzbruch", "eisliebe", "emotionssturm"]
+  },
+  {
+    "clue": "🧬🧪💡🤯",
+    "answer": "entdeckung",
+    "options": ["entdeckung", "ideenlabor", "geniusblitz", "forschungsexplosion"]
+  },
+  {
+    "clue": "🐾🦓🌍🍃",
+    "answer": "wildtiere",
+    "options": ["wildtiere", "safaripfad", "tierwelt", "naturtiere"]
+  },
+  {
+    "clue": "🏃‍♂️⏱️🥇🏁",
+    "answer": "schnellsieg",
+    "options": ["schnellsieg", "tempoziel", "rennenende", "zeitgewinn"]
+  }
+]
