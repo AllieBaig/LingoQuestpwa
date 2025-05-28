@@ -1,25 +1,27 @@
-
 /**
- * Shared ASCII Renderer for fallback UI in LingoQuestPWA
- * Handles rendering clue, MCQ buttons, and summary in text-mode
- * Applies to #sentenceClue, #sentenceBuilderArea, #resultSummary
+ * ASCII Renderer Utility (Merged & Modular)
+ * Renders consistent, terminal-style ASCII blocks for clues, options, and results.
+ * Works with #sentenceClue, #sentenceBuilderArea, #resultSummary
  * MIT License: https://github.com/AllieBaig/LingoQuest/blob/main/LICENSE
- * Timestamp: 2025-05-28 19:40 | File: scripts/utils/asciiRenderer.js
+ * Timestamp: 2025-05-28 20:35 | File: scripts/utils/asciiRenderer.js
  */
 
 export function renderClue(text) {
   const clueEl = document.querySelector('#sentenceClue');
-  clueEl.textContent = `>>> ${text}`;
+  const lines = text.trim().split('\n');
+  clueEl.textContent = renderClueBlock('[ Clue ]', lines);
 }
 
-export function renderSummary(msg) {
-  const resultEl = document.querySelector('#resultSummary');
-  resultEl.textContent = msg;
+export function renderClueBlock(modeLabel, lines) {
+  return box([
+    `${modeLabel}`,
+    ...lines
+  ]);
 }
 
 export function renderMCQ(options, answer, callback) {
   const builderEl = document.querySelector('#sentenceBuilderArea');
-  builderEl.innerHTML = ''; // Clear previous
+  builderEl.innerHTML = '';
 
   options.forEach((opt, i) => {
     const btn = document.createElement('button');
@@ -34,3 +36,36 @@ export function renderMCQ(options, answer, callback) {
     builderEl.appendChild(btn);
   });
 }
+
+export function renderResult(msg) {
+  const resultEl = document.querySelector('#resultSummary');
+  resultEl.textContent = [
+    '══════════════════════════════════════════════════════',
+    `[✓] Result: ${msg}`,
+    '══════════════════════════════════════════════════════'
+  ].join('\n');
+}
+
+export function renderFooterHUD(xp, streak, version) {
+  return `XP: ${xp} pts  |  Streak: ${streak}  |  Version: ${version}`;
+}
+
+export function printAscii(...blocks) {
+  const out = document.getElementById('asciiOutput');
+  if (out) {
+    out.hidden = false;
+    out.textContent = blocks.join('\n\n');
+  }
+}
+
+// Internal: boxed ASCII container
+function box(lines) {
+  const width = 54;
+  const top = '╔' + '═'.repeat(width) + '╗';
+  const bottom = '╚' + '═'.repeat(width) + '╝';
+  const padded = lines.map(line =>
+    '║ ' + line.padEnd(width - 2) + ' ║'
+  );
+  return [top, ...padded, bottom].join('\n');
+}
+
