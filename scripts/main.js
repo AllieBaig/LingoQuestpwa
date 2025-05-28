@@ -1,10 +1,9 @@
 /**
- * Main Entrypoint for LingoQuestPWA.
- * Dynamically loads mode + UI type based on URL query.
- * Applies dark mode, loads profile, and starts game.
- * Depends on: uiModeManager.js, profileManager.js, version.js
+ * Main App Bootstrap for LingoQuestPWA
+ * Loads correct mode, language, and UI from URL or settings
+ * Handles shared XP, UI init, dark mode, and version display
  * MIT License: https://github.com/AllieBaig/LingoQuest/blob/main/LICENSE
- * Timestamp: 2025-05-28 15:35 | File: scripts/main.js
+ * Timestamp: 2025-05-28 21:50 | File: scripts/main.js
  */
 
 import { applyUIMode } from './utils/uiModeManager.js';
@@ -13,96 +12,54 @@ import { initVersionDisplay } from './utils/version.js';
 import { updateXPDisplay } from './utils/xpTracker.js';
 import { renderGameMenu } from './utils/menuRenderer.js';
 
-
-
-
 // Read URL parameters
 const params = new URLSearchParams(location.search);
-const mode = params.get('mode') || 'solo';
-const lang = params.get('lang') || 'fr';
-const ui = params.get('ui') || 'normal';
+const rawMode = params.get('mode');
+const mode = rawMode || null;
 
-
+// Show menu if no mode is selected
 if (!mode) {
-  // If no mode is selected in URL, show the main menu
   renderGameMenu();
+  applyUIMode();
+  loadUserProfile();
+  initVersionDisplay();
+  updateXPDisplay();
+  return;
 }
 
-// Apply UI mode and dark mode settings
-applyUIMode(ui);
+// Else: load mode
+const lang = params.get('lang') || localStorage.getItem('selectedLang') || 'fr';
+const ui = params.get('ui') || localStorage.getItem('uiMode') || 'normal';
 
-// Load and show user profile
-const profile = loadUserProfile();
-document.querySelector('#userNickname').textContent = `👤 ${profile.nickname}`;
-updateXPDisplay(profile.xp || 0);
-
-// Display version info
+// Apply all UI & shared systems
+applyUIMode();
+loadUserProfile();
 initVersionDisplay();
+updateXPDisplay();
 
-// Dynamically import game mode
-async function loadGameMode(mode, lang, ui) {
-  try {
-    if (ui === 'ascii') {
-      switch (mode) {
-        case 'mixlingo':
-          const { initAsciiMixLingo } = await import('./ascii/lingoquest/mixlingo.js');
-          initAsciiMixLingo(lang);
-          break;
-        case 'wordrelic':
-          const { initAsciiWordRelic } = await import('./ascii/lingoquest/wordrelic.js');
-          initAsciiWordRelic(lang);
-          break;
-        case 'solo':
-          const { initAsciiSolo } = await import('./ascii/lingoquest/solo.js');
-          initAsciiSolo(lang);
-          break;
-        default:
-          document.querySelector('#sentenceClue').textContent = '[Unknown ASCII mode]';
-      }
-    } else {
-      switch (mode) {
-        case 'mixlingo':
-          const { initMixLingo } = await import('./lingoquest/mixlingo.js');
-          initMixLingo(lang);
-          break;
-        case 'wordrelic':
-          const { initWordRelic } = await import('./lingoquest/wordrelic.js');
-          initWordRelic(lang);
-          break;
-        case 'wordsafari':
-          const { initWordSafari } = await import('./lingoquest/wordsafari.js');
-          initWordSafari(lang);
-          break;
-        case 'solo':
-        default:
-          const { initSoloFR } = await import('./lingoquest/solo/fr.js');
-          initSoloFR();
-          break;
-      }
-    }
-  } catch (err) {
-    document.querySelector('#sentenceClue').textContent = '[⚠️ Error loading mode]';
-    console.error(err);
+// Mode loader
+if (mode === 'mixlingo') {
+  if (ui === 'ascii') {
+    import('./ascii/lingoquest/mixlingo.js').then(m => m.initAsciiMixLingo(lang));
+  } else {
+    import('./lingoquest/mixlingo.js').then(m => m.initMixLingo(lang));
+  }
+} else if (mode === 'wordrelic') {
+  if (ui === 'ascii') {
+    import('./ascii/lingoquest/wordrelic.js').then(m => m.initAsciiWordRelic(lang));
+  } else {
+    import('./lingoquest/wordrelic.js').then(m => m.initWordRelic(lang));
+  }
+} else if (mode === 'wordsafari') {
+  if (ui === 'ascii') {
+    import('./ascii/lingoquest/wordsafari.js').then(m => m.initAsciiWordSafari(lang));
+  } else {
+    import('./lingoquest/wordsafari.js').then(m => m.initWordSafari(lang));
+  }
+} else if (mode === 'solo') {
+  if (ui === 'ascii') {
+    import('./ascii/lingoquest/solo.js').then(m => m.initAsciiSolo(lang));
+  } else {
+    import(`./lingoquest/solo/${lang}.js`).then(m => m.initSolo(lang));
   }
 }
-
-// If no mode is passed, show the game selector
-if (!params.has('mode')) {
-  document.querySelector('#modeSelectorPanel')?.classList.remove('hidden');
-  const buttons = document.querySelectorAll('#modeSelectorPanel button');
-  buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const selectedMode = btn.dataset.mode;
-      const selectedLang = btn.dataset.lang;
-      const targetUrl = `?mode=${selectedMode}&lang=${selectedLang}&ui=${ui}`;
-      location.href = targetUrl;
-    });
-  });
-} else {
-  loadGameMode(mode, lang, ui); // ⬅ keep this line as-is
-}
-
-
-// Run it!
-// loadGameMode(mode, lang, ui);
-
