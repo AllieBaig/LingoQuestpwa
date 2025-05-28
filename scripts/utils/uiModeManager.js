@@ -1,57 +1,68 @@
-
 /**
- * UI Mode Manager — Handles ASCII/Normal toggle and Dark Mode
- * Loads preferred UI from URL or localStorage and updates body class.
- * Applies changes to dropdowns and dark mode button if present.
- * Depends on: #uiModeToggle, #darkModeToggle, body.minimal-ui
+ * UI Mode & Appearance Manager
+ * Applies dark mode, ASCII/Normal UI, and button size settings.
+ * Used by main.js on page load. Saves state in localStorage.
+ * Related: styles/main.css, minimal-ui.css, index.html dropdowns
  * MIT License: https://github.com/AllieBaig/LingoQuest/blob/main/LICENSE
- * Timestamp: 2025-05-28 15:45 | File: scripts/utils/uiModeManager.js
+ * Timestamp: 2025-05-28 18:55 | File: scripts/utils/uiModeManager.js
  */
 
-export function applyUIMode(defaultUI = 'normal') {
-  const params = new URLSearchParams(location.search);
-  const storedUI = localStorage.getItem('uiMode');
-  const storedDark = localStorage.getItem('darkMode');
-
-  const urlUIMode = params.get('ui');
-  const urlDark = params.get('dark');
-
-  const uiMode = urlUIMode || storedUI || defaultUI;
-  const darkMode = urlDark === 'true' || storedDark === 'true';
-
+export function applyUIMode() {
+  const html = document.documentElement;
   const body = document.body;
 
-  // UI Class
-  body.classList.add('minimal-ui');
-  if (darkMode) body.classList.add('dark');
-  else body.classList.remove('dark');
-
-  // Persist state
-  localStorage.setItem('uiMode', uiMode);
-  localStorage.setItem('darkMode', darkMode ? 'true' : 'false');
-
-  // Reflect dropdown toggle
+  // UI Mode: normal or ascii
   const uiDropdown = document.querySelector('#uiModeToggle');
+  const storedUIMode = localStorage.getItem('uiMode') || 'normal';
+  body.classList.add(`${storedUIMode}-ui`);
   if (uiDropdown) {
-    uiDropdown.value = uiMode;
-    uiDropdown.addEventListener('change', () => {
-      localStorage.setItem('uiMode', uiDropdown.value);
-      reloadWithParam('ui', uiDropdown.value);
+    uiDropdown.value = storedUIMode;
+    uiDropdown.addEventListener('change', (e) => {
+      localStorage.setItem('uiMode', e.target.value);
+      location.reload(); // reload with new class
     });
   }
 
-  // Dark mode toggle
+  // Dark Mode
   const darkToggle = document.querySelector('#darkModeToggle');
+  const darkPref = localStorage.getItem('darkMode') === 'true';
+  if (darkPref) {
+    body.classList.add('dark');
+  }
+
   if (darkToggle) {
     darkToggle.addEventListener('click', () => {
-      const isDark = body.classList.toggle('dark');
-      localStorage.setItem('darkMode', isDark ? 'true' : 'false');
+      body.classList.toggle('dark');
+      localStorage.setItem('darkMode', body.classList.contains('dark'));
     });
   }
-}
 
-function reloadWithParam(key, value) {
-  const url = new URL(location.href);
-  url.searchParams.set(key, value);
-  location.href = url.toString();
+  // Button Size Mode
+  const sizeDropdown = document.querySelector('#buttonSizeToggle');
+  const storedBtnSize = localStorage.getItem('buttonSize');
+  const isMobile = window.innerWidth < 640;
+  const isFirstVisit = !storedBtnSize;
+
+  let btnSize = storedBtnSize;
+  if (isFirstVisit) {
+    btnSize = isMobile ? 'xl' : 'md';
+    localStorage.setItem('buttonSize', btnSize);
+  }
+
+  body.classList.add(`btn-${btnSize}`);
+  if (sizeDropdown) {
+    sizeDropdown.value = btnSize;
+    sizeDropdown.addEventListener('change', () => {
+      const newSize = sizeDropdown.value;
+      ['btn-md', 'btn-lg', 'btn-xl', 'btn-xxl'].forEach(cls => body.classList.remove(cls));
+      body.classList.add(`btn-${newSize}`);
+      localStorage.setItem('buttonSize', newSize);
+    });
+  }
+
+  // One-time mobile hint
+  if (isMobile && !localStorage.getItem('btnSizeHintShown')) {
+    alert("Tip: For easier tapping, choose 🟥 Extra Large or 🧱 Extra Very Large button size in settings.");
+    localStorage.setItem('btnSizeHintShown', 'true');
+  }
 }
