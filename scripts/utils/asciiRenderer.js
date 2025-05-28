@@ -1,9 +1,8 @@
 /**
- * ASCII Renderer Utility (Merged & Modular)
- * Renders consistent, terminal-style ASCII blocks for clues, options, and results.
- * Works with #sentenceClue, #sentenceBuilderArea, #resultSummary
+ * ASCII Renderer Utility (Emoji Toggle Support)
+ * Renders ASCII UI clues, MCQs, summaries with optional emoji-free mode
  * MIT License: https://github.com/AllieBaig/LingoQuest/blob/main/LICENSE
- * Timestamp: 2025-05-28 20:35 | File: scripts/utils/asciiRenderer.js
+ * Timestamp: 2025-05-28 20:50 | File: scripts/utils/asciiRenderer.js
  */
 
 export function renderClue(text) {
@@ -14,8 +13,8 @@ export function renderClue(text) {
 
 export function renderClueBlock(modeLabel, lines) {
   return box([
-    `${modeLabel}`,
-    ...lines
+    sanitize(modeLabel),
+    ...lines.map(line => sanitize(line))
   ]);
 }
 
@@ -26,7 +25,7 @@ export function renderMCQ(options, answer, callback) {
   options.forEach((opt, i) => {
     const btn = document.createElement('button');
     btn.className = 'mcq-option';
-    btn.textContent = `[${i + 1}] ${opt}`;
+    btn.textContent = `[${i + 1}] ${sanitize(opt)}`;
     btn.addEventListener('click', () => {
       const isCorrect = opt === answer;
       btn.classList.add(isCorrect ? 'correct' : 'wrong');
@@ -37,11 +36,18 @@ export function renderMCQ(options, answer, callback) {
   });
 }
 
-export function renderResult(msg) {
+export function renderResult(msg, emojiType = 'success') {
   const resultEl = document.querySelector('#resultSummary');
+
+  const mark = {
+    success: '✓',
+    error: '✘',
+    info: 'ℹ'
+  }[emojiType] || '✓';
+
   resultEl.textContent = [
     '══════════════════════════════════════════════════════',
-    `[✓] Result: ${msg}`,
+    `[${mark}] Result: ${sanitize(msg)}`,
     '══════════════════════════════════════════════════════'
   ].join('\n');
 }
@@ -54,11 +60,11 @@ export function printAscii(...blocks) {
   const out = document.getElementById('asciiOutput');
   if (out) {
     out.hidden = false;
-    out.textContent = blocks.join('\n\n');
+    out.textContent = blocks.map(sanitize).join('\n\n');
   }
 }
 
-// Internal: boxed ASCII container
+// Internal: box drawing
 function box(lines) {
   const width = 54;
   const top = '╔' + '═'.repeat(width) + '╗';
@@ -69,3 +75,14 @@ function box(lines) {
   return [top, ...padded, bottom].join('\n');
 }
 
+// Internal: emoji sanitization if in pure mode
+function sanitize(text) {
+  const mode = localStorage.getItem('asciiEmojiMode') || 'emoji';
+  if (mode === 'pure') {
+    return text.replace(
+      /[\u{1F300}-\u{1F6FF}\u{2700}-\u{27BF}\u{1F900}-\u{1F9FF}\u{2600}-\u{26FF}]/gu,
+      ''
+    );
+  }
+  return text;
+}
