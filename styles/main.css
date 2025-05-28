@@ -160,6 +160,36 @@ body.minimal-ui.dark #levelBadge {
     gap: 0.3rem;
   }
 
+#modeSelectorPanel {
+  padding: 1rem;
+  text-align: center;
+}
+
+.modeButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.modeButtons button {
+  font-size: 1em;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background-color: var(--button-bg);
+  color: var(--button-fg);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+body.minimal-ui.dark .modeButtons button {
+  background-color: #222;
+  color: #eee;
+}
+
+
   #gameContainer {
     padding: 0.5rem;
   }
