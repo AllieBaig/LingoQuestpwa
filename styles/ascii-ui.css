@@ -85,3 +85,18 @@ body.ascii-ui .ascii-output {
     font-size: 14px;
   }
 }
+
+body.ascii-ui select,
+body.ascii-ui button {
+  font-family: monospace;
+  font-size: 1rem;
+  background: #222;
+  color: #ccc;
+  border: 1px solid #555;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+}
+
+
+
+
