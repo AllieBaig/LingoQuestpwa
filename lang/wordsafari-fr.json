@@ -1,0 +1,13 @@
+
+[
+  {
+    "category": "African Animals",
+    "answer": "girafe",
+    "options": ["girafe", "pomme", "chat", "voiture"]
+  },
+  {
+    "category": "Ocean Creatures",
+    "answer": "requin",
+    "options": ["requin", "canard", "plage", "table"]
+  }
+]
