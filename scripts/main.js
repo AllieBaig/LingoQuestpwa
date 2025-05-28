@@ -11,12 +11,23 @@ import { applyUIMode } from './utils/uiModeManager.js';
 import { loadUserProfile } from '../tools/profileManager.js';
 import { initVersionDisplay } from './utils/version.js';
 import { updateXPDisplay } from './utils/xpTracker.js';
+import { renderGameMenu } from './utils/menuRenderer.js';
+
+
+
 
 // Read URL parameters
 const params = new URLSearchParams(location.search);
 const mode = params.get('mode') || 'solo';
 const lang = params.get('lang') || 'fr';
 const ui = params.get('ui') || 'normal';
+
+
+if (!mode) {
+  // If no mode is selected in URL, show the main menu
+  renderGameMenu();
+  return;
+}
 
 // Apply UI mode and dark mode settings
 applyUIMode(ui);
