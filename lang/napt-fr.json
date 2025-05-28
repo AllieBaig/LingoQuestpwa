@@ -1,0 +1,93 @@
+
+[
+  {
+    "category": "name",
+    "prompt": "Quel est un prénom français ?",
+    "options": ["Julie", "Table", "Lune"],
+    "answer": "Julie"
+  },
+  {
+    "category": "animal",
+    "prompt": "Lequel est un animal ?",
+    "options": ["Chat", "Livre", "Lampe"],
+    "answer": "Chat"
+  },
+  {
+    "category": "place",
+    "prompt": "Quel est un lieu réel ?",
+    "options": ["Paris", "Chien", "Cuillère"],
+    "answer": "Paris"
+  },
+  {
+    "category": "thing",
+    "prompt": "Lequel est un objet ?",
+    "options": ["Stylo", "Poisson", "Claire"],
+    "answer": "Stylo"
+  },
+  {
+    "category": "name",
+    "prompt": "Quel prénom est masculin ?",
+    "options": ["Marc", "Soleil", "Chaise"],
+    "answer": "Marc"
+  },
+  {
+    "category": "animal",
+    "prompt": "Quel animal vit dans l'eau ?",
+    "options": ["Poisson", "Voiture", "Banane"],
+    "answer": "Poisson"
+  },
+  {
+    "category": "place",
+    "prompt": "Quel est un pays ?",
+    "options": ["France", "Crayon", "Alice"],
+    "answer": "France"
+  },
+  {
+    "category": "thing",
+    "prompt": "Qu’est-ce qu’on peut porter ?",
+    "options": ["Manteau", "Tigre", "Forêt"],
+    "answer": "Manteau"
+  },
+  {
+    "category": "name",
+    "prompt": "Quel prénom est féminin ?",
+    "options": ["Élise", "Papier", "Château"],
+    "answer": "Élise"
+  },
+  {
+    "category": "animal",
+    "prompt": "Quel est un insecte ?",
+    "options": ["Fourmi", "Chapeau", "Verre"],
+    "answer": "Fourmi"
+  },
+  {
+    "category": "place",
+    "prompt": "Quelle est une capitale ?",
+    "options": ["Bruxelles", "Téléphone", "Jean"],
+    "answer": "Bruxelles"
+  },
+  {
+    "category": "thing",
+    "prompt": "Lequel est un outil ?",
+    "options": ["Marteau", "Vache", "Léa"],
+    "answer": "Marteau"
+  },
+  {
+    "category": "name",
+    "prompt": "Quel est un prénom typique ?",
+    "options": ["Luc", "Avion", "Montagne"],
+    "answer": "Luc"
+  },
+  {
+    "category": "animal",
+    "prompt": "Lequel est un animal sauvage ?",
+    "options": ["Loup", "Horloge", "Bateau"],
+    "answer": "Loup"
+  },
+  {
+    "category": "thing",
+    "prompt": "Quel objet utilise-t-on à l’école ?",
+    "options": ["Cahier", "Éléphant", "Marie"],
+    "answer": "Cahier"
+  }
+]
