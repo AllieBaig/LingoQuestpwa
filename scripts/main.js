@@ -7,7 +7,12 @@
  * Timestamp: 2025-05-28 15:35 | File: scripts/main.js
  */
 
+
+import { attachGlobalErrorHandler } from '../tools/errorLog.js';
+attachGlobalErrorHandler(); // Setup error logging globally
+
 import { applyUIMode } from './utils/uiModeManager.js';
+//import { applyUIMode } from './utils/uiModeManager.js';
 //import { loadUserProfile } from '../tools/profileManager.js';
 //import { initVersionDisplay } from './utils/version.js';
 //import { updateXPDisplay } from './utils/xpTracker.js';
