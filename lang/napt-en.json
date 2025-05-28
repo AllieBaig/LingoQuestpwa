@@ -1,0 +1,153 @@
+
+[
+  {
+    "category": "name",
+    "prompt": "Which of these is a name?",
+    "options": ["Jasmine", "Cabbage"],
+    "answer": "Jasmine"
+  },
+  {
+    "category": "animal",
+    "prompt": "Which of these is an animal?",
+    "options": ["Elephant", "Elevator"],
+    "answer": "Elephant"
+  },
+  {
+    "category": "place",
+    "prompt": "Which of these is a place?",
+    "options": ["Paris", "Penguin"],
+    "answer": "Paris"
+  },
+  {
+    "category": "thing",
+    "prompt": "Which of these is a thing?",
+    "options": ["Pencil", "Parrot"],
+    "answer": "Pencil"
+  },
+  {
+    "category": "animal",
+    "prompt": "Which of these is an animal?",
+    "options": ["Tiger", "Table"],
+    "answer": "Tiger"
+  },
+  {
+    "category": "name",
+    "prompt": "Which of these is a name?",
+    "options": ["Oliver", "Oven"],
+    "answer": "Oliver"
+  },
+  {
+    "category": "place",
+    "prompt": "Which of these is a place?",
+    "options": ["Tokyo", "Tornado"],
+    "answer": "Tokyo"
+  },
+  {
+    "category": "thing",
+    "prompt": "Which of these is a thing?",
+    "options": ["Chair", "Cheetah"],
+    "answer": "Chair"
+  },
+  {
+    "category": "name",
+    "prompt": "Which of these is a name?",
+    "options": ["Isabella", "Igloo"],
+    "answer": "Isabella"
+  },
+  {
+    "category": "animal",
+    "prompt": "Which of these is an animal?",
+    "options": ["Giraffe", "Guitar"],
+    "answer": "Giraffe"
+  },
+  {
+    "category": "place",
+    "prompt": "Which of these is a place?",
+    "options": ["London", "Lamp"],
+    "answer": "London"
+  },
+  {
+    "category": "thing",
+    "prompt": "Which of these is a thing?",
+    "options": ["Spoon", "Snake"],
+    "answer": "Spoon"
+  },
+  {
+    "category": "name",
+    "prompt": "Which of these is a name?",
+    "options": ["Emily", "Engine"],
+    "answer": "Emily"
+  },
+  {
+    "category": "animal",
+    "prompt": "Which of these is an animal?",
+    "options": ["Rabbit", "Radio"],
+    "answer": "Rabbit"
+  },
+  {
+    "category": "place",
+    "prompt": "Which of these is a place?",
+    "options": ["Cairo", "Candle"],
+    "answer": "Cairo"
+  },
+  {
+    "category": "thing",
+    "prompt": "Which of these is a thing?",
+    "options": ["Notebook", "Nightingale"],
+    "answer": "Notebook"
+  },
+  {
+    "category": "name",
+    "prompt": "Which of these is a name?",
+    "options": ["Liam", "Ladder"],
+    "answer": "Liam"
+  },
+  {
+    "category": "animal",
+    "prompt": "Which of these is an animal?",
+    "options": ["Bear", "Bench"],
+    "answer": "Bear"
+  },
+  {
+    "category": "place",
+    "prompt": "Which of these is a place?",
+    "options": ["Berlin", "Balloon"],
+    "answer": "Berlin"
+  },
+  {
+    "category": "thing",
+    "prompt": "Which of these is a thing?",
+    "options": ["Cup", "Crab"],
+    "answer": "Cup"
+  },
+  {
+    "category": "name",
+    "prompt": "Which of these is a name?",
+    "options": ["Sophia", "Sofa"],
+    "answer": "Sophia"
+  },
+  {
+    "category": "animal",
+    "prompt": "Which of these is an animal?",
+    "options": ["Kangaroo", "Kettle"],
+    "answer": "Kangaroo"
+  },
+  {
+    "category": "place",
+    "prompt": "Which of these is a place?",
+    "options": ["Rome", "Raccoon"],
+    "answer": "Rome"
+  },
+  {
+    "category": "thing",
+    "prompt": "Which of these is a thing?",
+    "options": ["Glasses", "Goose"],
+    "answer": "Glasses"
+  },
+  {
+    "category": "name",
+    "prompt": "Which of these is a name?",
+    "options": ["Ava", "Avocado"],
+    "answer": "Ava"
+  }
+]
