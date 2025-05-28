@@ -28,9 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
   applyUIMode(ui);
 
   // ------------Load and show user profile---------------
-  ///const profile = loadUserProfile();
-  //document.querySelector('#userNickname').textContent = `👤 ${profile.nickname}`;
-  //updateXPDisplay(profile.xp || 0);
+  const profile = loadUserProfile();
+  document.querySelector('#userNickname').textContent = `👤 ${profile.nickname}`;
+  updateXPDisplay(profile.xp || 0);
 
   // Display version info
   //initVersionDisplay();
