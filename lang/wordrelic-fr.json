@@ -1,0 +1,128 @@
+
+[
+  {
+    "clue": "👑🐝💡👶",
+    "answer": "reineabeille",
+    "options": ["reineabeille", "lumièrebuzz", "béberoyale", "abeillebébé"]
+  },
+  {
+    "clue": "🌍🔥🚫🧊",
+    "answer": "réchauffement",
+    "options": ["réchauffement", "refroidissement", "èreglaciaire", "feumonde"]
+  },
+  {
+    "clue": "📚🧠⚡🎓",
+    "answer": "connaissance",
+    "options": ["connaissance", "pouvoircerveau", "écoléchoc", "lumièreappris"]
+  },
+  {
+    "clue": "🎯🧭🔍🏹",
+    "answer": "concentration",
+    "options": ["concentration", "objectif", "chasse", "rechercheflèche"]
+  },
+  {
+    "clue": "🔒❤️🗝️🤫",
+    "answer": "amoursecret",
+    "options": ["amoursecret", "cœurfermé", "désircaché", "interdit"]
+  },
+  {
+    "clue": "💤📦📬📮",
+    "answer": "boîtereve",
+    "options": ["boîtereve", "nuitcourrier", "livraisonsommeil", "caissesommeil"]
+  },
+  {
+    "clue": "👟🕒🏃‍♂️📍",
+    "answer": "datebutoir",
+    "options": ["datebutoir", "voyagetemps", "pointfinal", "objectifrapide"]
+  },
+  {
+    "clue": "🕵️‍♂️🎭💭🧩",
+    "answer": "mystère",
+    "options": ["mystère", "détective", "masquesecret", "énigmeesprit"]
+  },
+  {
+    "clue": "🎸🔥🕺🎤",
+    "answer": "rockstar",
+    "options": ["rockstar", "musiquefeu", "dansemicro", "feusurscène"]
+  },
+  {
+    "clue": "🌙🚀🛸🪐",
+    "answer": "voyagespatial",
+    "options": ["voyagespatial", "lunetrip", "baladealien", "explorationcosmos"]
+  },
+  {
+    "clue": "⏰😴🐓🌅",
+    "answer": "matin",
+    "options": ["matin", "réveil", "chantcoq", "levédujour"]
+  },
+  {
+    "clue": "🐉🔥🏰⚔️",
+    "answer": "batailledragon",
+    "options": ["batailledragon", "châteaubraise", "épéemonstre", "quêteépique"]
+  },
+  {
+    "clue": "🌪️🚪👻🎃",
+    "answer": "maisonhantée",
+    "options": ["maisonhantée", "oragefantôme", "portefrisson", "citrouilleroom"]
+  },
+  {
+    "clue": "🌧️🌊🚢⚓",
+    "answer": "tempêtemarine",
+    "options": ["tempêtemarine", "pluiebateau", "océanfurieux", "naufrage"]
+  },
+  {
+    "clue": "🌲🧭🚶‍♂️🥾",
+    "answer": "aventure",
+    "options": ["aventure", "marcheforêt", "cartesauvage", "randonnée"]
+  },
+  {
+    "clue": "🐦📢🎶🎼",
+    "answer": "oiseauchanteur",
+    "options": ["oiseauchanteur", "chantnote", "musichirp", "mélodioiseau"]
+  },
+  {
+    "clue": "🎮👾👨‍💻🧠",
+    "answer": "cerveaujoueur",
+    "options": ["cerveaujoueur", "espritgaming", "hackerjeu", "neurocontrole"]
+  },
+  {
+    "clue": "🌸👁️🧘‍♂️💫",
+    "answer": "espritzen",
+    "options": ["espritzen", "calmepensée", "fleurâme", "méditation"]
+  },
+  {
+    "clue": "👶💡🌱📈",
+    "answer": "croissance",
+    "options": ["croissance", "bébéidée", "pousseidée", "évolution"]
+  },
+  {
+    "clue": "📅🕓🚀🎯",
+    "answer": "lancement",
+    "options": ["lancement", "calendarmission", "objectiftemps", "projetciblé"]
+  },
+  {
+    "clue": "👓📖💭💬",
+    "answer": "littératie",
+    "options": ["littératie", "penséelivre", "idéelecture", "paroleécrite"]
+  },
+  {
+    "clue": "🧊💔🔥🌪️",
+    "answer": "émotions",
+    "options": ["émotions", "cœurglacé", "chagrinstorm", "colèreamour"]
+  },
+  {
+    "clue": "🧬🧪💡🤯",
+    "answer": "découverte",
+    "options": ["découverte", "idéalabo", "éclaireur", "génieinattendu"]
+  },
+  {
+    "clue": "🐾🦓🌍🍃",
+    "answer": "faune",
+    "options": ["faune", "safaripiste", "zèbreterre", "vieanimale"]
+  },
+  {
+    "clue": "🏃‍♂️⏱️🥇🏁",
+    "answer": "victoirerapide",
+    "options": ["victoirerapide", "objectifchrono", "finexplosive", "sprintréussi"]
+  }
+]
