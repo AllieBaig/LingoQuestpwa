@@ -7,10 +7,10 @@
  * Timestamp: 2025-05-28 15:35 | File: scripts/main.js
  */
 
-import { applyUIMode } from './utils/uiModeManager.js';
-import { loadUserProfile } from '../tools/profileManager.js';
-import { initVersionDisplay } from './utils/version.js';
-import { updateXPDisplay } from './utils/xpTracker.js';
+//import { applyUIMode } from './utils/uiModeManager.js';
+//import { loadUserProfile } from '../tools/profileManager.js';
+//import { initVersionDisplay } from './utils/version.js';
+//import { updateXPDisplay } from './utils/xpTracker.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // Read URL parameters
