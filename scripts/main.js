@@ -24,7 +24,7 @@ if (!mode) {
   loadUserProfile();
   initVersionDisplay();
   updateXPDisplay();
-  return;
+  
 }
 
 // Else: load mode
