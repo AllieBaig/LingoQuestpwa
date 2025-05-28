@@ -218,6 +218,38 @@ body.minimal-ui.dark #errorLogPanel {
   display: none !important;
 }
 
+/* Default MCQ styling (resizable) */
+.mcq-option {
+  margin: 0.4rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background-color: var(--button-bg);
+  color: var(--button-fg);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+/* Button sizing classes applied to <body> */
+body.btn-md .mcq-option {
+  font-size: 1em;
+  padding: 0.5rem 0.8rem;
+}
+
+body.btn-lg .mcq-option {
+  font-size: 1.25em;
+  padding: 0.6rem 1rem;
+}
+
+body.btn-xl .mcq-option {
+  font-size: 1.5em;
+  padding: 0.75rem 1.2rem;
+}
+
+body.btn-xxl .mcq-option {
+  font-size: 1.75em;
+  padding: 1rem 1.5rem;
+}
+
 
   #gameContainer {
     padding: 0.5rem;
