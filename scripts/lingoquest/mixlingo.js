@@ -1,10 +1,9 @@
-
 /**
  * MixLingo – Normal UI with MCQ (English Sentence + Foreign Word Options)
  * Replaces one English word in a sentence with MCQ foreign word choices
  * Matches ASCII logic but styled for Minimal UI with button interactions
  * MIT License: https://github.com/AllieBaig/LingoQuest/blob/main/LICENSE
- * Timestamp: 2025-05-27 23:59 | File: scripts/lingoquest/mixlingo.js
+ * Timestamp: 2025-05-28 22:20 | File: scripts/lingoquest/mixlingo.js
  */
 
 import { generateMCQ } from '../utils/mcqEngine.js';
@@ -15,17 +14,16 @@ export function initMixLingoMode(level = 'easy', lang = 'fr') {
   const resultEl = document.getElementById('resultSummary');
   const submitBtn = document.getElementById('submitSentence');
 
-  // Example sentence structure
   const sentenceData = {
     clue: "Complete the sentence with the correct foreign word:",
     sentence: ["I", "want", "to", "___", "an", "apple."],
-    correct: "manger", // "to eat" in French
+    correct: "manger", // French for "to eat"
     level,
     lang,
     fact: "‘Manger’ is French for ‘to eat’."
   };
 
-  // Render sentence with blank
+  // Render sentence and options
   clueEl.textContent = sentenceData.clue;
   builderArea.innerHTML = '';
 
@@ -63,16 +61,14 @@ export function initMixLingoMode(level = 'easy', lang = 'fr') {
     }
 
     if (selected === sentenceData.correct) {
-      resultEl.textContent = `Correct! ${sentenceData.fact} +10 XP`;
+      resultEl.textContent = `✅ Correct! ${sentenceData.fact} +10 XP`;
     } else {
-      resultEl.textContent = `Incorrect. ${sentenceData.fact}`;
+      resultEl.textContent = `❌ Incorrect. ${sentenceData.fact}`;
     }
   };
 }
 
-/* // ✅ Optional wrapper for main.js compatibility
+// ✅ Wrapper for dynamic import compatibility
 export function initMixLingo(lang = 'fr') {
   initMixLingoMode('easy', lang);
 }
-*/
-
