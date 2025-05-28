@@ -1,0 +1,153 @@
+
+[
+  {
+    "theme": "Arctic Echoes",
+    "letter": "I",
+    "intro": "In the silence of endless snow, echoes bounce between icy cliffs. Today’s journey is carved in the letter I.",
+    "prompts": {
+      "name": "A name suited for a polar researcher, starting with I",
+      "place": "A cold or icy location starting with I",
+      "animal": "An arctic or sea-dwelling animal starting with I",
+      "thing": "A survival item used in freezing conditions, starting with I"
+    },
+    "relic": {
+      "name": "Icetongue Flare",
+      "description": "Said to light only when spoken to in forgotten dialects."
+    }
+  },
+  {
+    "theme": "Desert Mirage",
+    "letter": "S",
+    "intro": "Waves of heat shimmer across the golden sands. This trail begins with the letter S.",
+    "prompts": {
+      "name": "A name you'd hear in a desert tribe, starting with S",
+      "place": "A desert or oasis starting with S",
+      "animal": "A desert-dwelling animal starting with S",
+      "thing": "A useful item to survive the heat, starting with S"
+    },
+    "relic": {
+      "name": "Sunshard Compass",
+      "description": "Always points to the nearest shade, not north."
+    }
+  },
+  {
+    "theme": "Jungle Whispers",
+    "letter": "T",
+    "intro": "Thick foliage rustles with unseen creatures. Today’s letter: T.",
+    "prompts": {
+      "name": "A name that echoes in green canopies, starting with T",
+      "place": "A tropical rainforest or region starting with T",
+      "animal": "A jungle creature starting with T",
+      "thing": "A tool for jungle exploration, starting with T"
+    },
+    "relic": {
+      "name": "Tigerroot Pendant",
+      "description": "Believed to protect from venom and lies."
+    }
+  },
+  {
+    "theme": "Ocean Secrets",
+    "letter": "M",
+    "intro": "Beneath the waves, mysteries wait. Dive deep with the letter M.",
+    "prompts": {
+      "name": "A sailor or merfolk name starting with M",
+      "place": "An underwater or coastal place starting with M",
+      "animal": "A sea creature starting with M",
+      "thing": "A nautical tool starting with M"
+    },
+    "relic": {
+      "name": "Moonkelp Lens",
+      "description": "Reveals messages written only by tides."
+    }
+  },
+  {
+    "theme": "Skybound Spires",
+    "letter": "A",
+    "intro": "High above the clouds, floating islands drift. Explore with the letter A.",
+    "prompts": {
+      "name": "A name that soars, starting with A",
+      "place": "A high place or aerial landmark starting with A",
+      "animal": "A flying creature starting with A",
+      "thing": "An item that aids flight, starting with A"
+    },
+    "relic": {
+      "name": "Aetherfeather Quill",
+      "description": "Said to write only in dreams."
+    }
+  },
+  {
+    "theme": "Volcanic Pulse",
+    "letter": "L",
+    "intro": "Molten rivers shape the land in fire. Face the flame with the letter L.",
+    "prompts": {
+      "name": "A name from the firefolk, starting with L",
+      "place": "A volcanic site or lava zone starting with L",
+      "animal": "A heat-loving or fiery creature starting with L",
+      "thing": "An object forged in fire, starting with L"
+    },
+    "relic": {
+      "name": "Lavaloom Shard",
+      "description": "Warm to the touch and whispers battle songs."
+    }
+  },
+  {
+    "theme": "Twilight Gardens",
+    "letter": "E",
+    "intro": "In the realm of dusk, glowing petals bloom. Your guide today is E.",
+    "prompts": {
+      "name": "A poetic name starting with E",
+      "place": "A garden or peaceful retreat starting with E",
+      "animal": "A creature found in gardens, starting with E",
+      "thing": "A gardening or mystical object, starting with E"
+    },
+    "relic": {
+      "name": "Eclipsed Lily",
+      "description": "Blooms once every silent moonrise."
+    }
+  },
+  {
+    "theme": "Forgotten Kingdoms",
+    "letter": "K",
+    "intro": "Ruins whisper of kings and forgotten wars. Start your trail with K.",
+    "prompts": {
+      "name": "A royal name starting with K",
+      "place": "A kingdom or ancient site starting with K",
+      "animal": "A beast of legend starting with K",
+      "thing": "A relic from a fallen dynasty, starting with K"
+    },
+    "relic": {
+      "name": "Kingshard Crown",
+      "description": "Only fits those who remember their past lives."
+    }
+  },
+  {
+    "theme": "Celestial Drift",
+    "letter": "V",
+    "intro": "Stars drift in orbits unknown. Set your course by the letter V.",
+    "prompts": {
+      "name": "A name inspired by the stars, starting with V",
+      "place": "A cosmic or planetary location starting with V",
+      "animal": "A space-themed or mythical animal starting with V",
+      "thing": "A tool used for navigation or time, starting with V"
+    },
+    "relic": {
+      "name": "Voidglass Chronometer",
+      "description": "Counts time only while moving forward."
+    }
+  },
+  {
+    "theme": "Enchanted Market",
+    "letter": "B",
+    "intro": "The stalls hum with curious trades and magical pacts. Begin with B.",
+    "prompts": {
+      "name": "A clever merchant's name starting with B",
+      "place": "A bazaar or trading place starting with B",
+      "animal": "A tamed or tricky animal starting with B",
+      "thing": "An item for barter or magic, starting with B"
+    },
+    "relic": {
+      "name": "Bargain Bell",
+      "description": "Rings only for fair deals and hidden truths."
+    }
+  }
+]
