@@ -94,5 +94,5 @@ if (!params.has('mode')) {
 
 
 // Run it!
-loadGameMode(mode, lang, ui);
+// loadGameMode(mode, lang, ui);
 
