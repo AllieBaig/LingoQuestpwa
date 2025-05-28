@@ -1,78 +1,60 @@
-
-<!--
-LingoQuest: Gamified Vocabulary Adventure
-MIT License — https://github.com/AllieBaig/LingoQuest/blob/main/LICENSE
-Generated: 2025-05-27 23:40 | File: index.html
--->
-
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#4a90e2" />
-  <title>LingoQuest</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="theme-color" content="#ffffff" />
   <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="icon" href="icons/favicon.svg" type="image/svg+xml" />
+
+  <!-- Critical CSS loaded first -->
   <link rel="stylesheet" href="styles/variables.css" />
-  <link rel="stylesheet" href="styles/main.css" />
-  <link rel="stylesheet" href="styles/lingoquest.css" />
-  <!-- Minimal UI loaded dynamically in JS if selected -->
+  <link rel="stylesheet" href="styles/minimal-ui.css" />
+  <link rel="stylesheet" href="styles/main.css" media="all" onload="this.media='all'" />
+  <link rel="stylesheet" href="styles/lingoquest.css" media="all" onload="this.media='all'" />
+
+  <title>LingoQuestPWA</title>
+
+  <!-- Preload fonts/icons if used -->
+  <link rel="preload" as="image" href="icons/icon-192.png" />
 </head>
+<body class="minimal-ui">
 
-<body>
-  <header id="header">
-    <h1 id="gameTitle">LingoQuest</h1>
-
-    <!-- Language toggle -->
-    <button id="languageToggle" aria-label="Change Language">🌐</button>
-
-    <!-- Dark mode toggle -->
-    <button id="darkModeToggle" aria-label="Toggle Dark Mode">🌓</button>
-
-    <!-- UI mode selector -->
-    <label for="uiModeSelector" class="sr-only">Select UI Mode</label>
-    <select id="uiModeSelector" name="uiModeSelector" aria-label="UI Mode">
-      <option value="normal" selected>Normal UI</option>
-      <option value="ascii">ASCII UI</option>
-    </select>
+  <!-- Top Bar -->
+  <header id="topBar">
+    <div id="userInfo">
+      <span id="userNickname">👤 Guest</span>
+    </div>
+    <div id="uiControls">
+      <select id="uiModeToggle" title="UI Mode">
+        <option value="normal">Normal UI</option>
+        <option value="ascii">ASCII UI</option>
+      </select>
+      <button id="darkModeToggle" title="Toggle Dark Mode">🌓</button>
+    </div>
   </header>
 
-  <main id="mainScreen">
-
-    <!-- Game Mode Selector -->
-    <section id="modeSelector">
-      <h2>Choose a Mode</h2>
-      <div class="mode-buttons">
-        <button id="startSolo">Start Solo Mode</button>
-        <button id="startMixLingo">Start MixLingo</button>
-      </div>
-    </section>
-
-    <!-- Game Panel -->
-    <section id="questPanel">
-      <div id="categorySelector" hidden></div>
-
-      <div id="sentenceClueContainer">
-        <p id="sentenceClue"></p>
-      </div>
-
-      <div id="sentenceBuilderArea" class="builder-area"></div>
-      <button id="submitSentence">Submit</button>
-    </section>
-
-    <section id="hintPanel" hidden></section>
-    <section id="resultSummary" hidden></section>
-
-    <!-- ASCII fallback area -->
-    <pre id="asciiOutput" hidden></pre>
+  <!-- Game Area -->
+  <main id="gameContainer">
+    <section id="sentenceClue" class="clueArea">Loading...</section>
+    <section id="sentenceBuilderArea" class="builderArea"></section>
+    <section id="resultSummary" class="resultArea"></section>
   </main>
 
-  <footer id="footer">
-    <div id="xpTracker"></div>
-    <div id="streakBadge"></div>
-    <div id="versionLabel"></div>
+  <!-- XP & Footer -->
+  <footer id="footerPanel">
+    <div id="xpTracker">
+      <span id="xpLabel">XP: </span>
+      <progress id="xpBar" value="0" max="100"></progress>
+      <span id="levelBadge">Lv 1</span>
+    </div>
+    <div id="versionInfo"></div>
   </footer>
 
+  <!-- Async JS Load -->
   <script type="module" src="scripts/main.js"></script>
 </body>
 </html>
