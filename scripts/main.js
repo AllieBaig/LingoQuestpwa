@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
   updateXPDisplay(profile.xp || 0);
 
   // Display version info
-  //initVersionDisplay();
+  initVersionDisplay();
 
   // Dynamically import game mode
   async function loadGameMode(mode, lang, ui) {
