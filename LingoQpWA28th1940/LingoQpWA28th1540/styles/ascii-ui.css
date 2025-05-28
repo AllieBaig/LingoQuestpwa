@@ -1,0 +1,112 @@
+
+/**
+ * ASCII UI Fallback Styles
+ * Applies a narrow, text-based UI layout for minimal compatibility
+ * Activated when <body> has class "ascii-ui"
+ * MIT License: https://github.com/AllieBaig/LingoQuest/blob/main/LICENSE
+ * Timestamp: 2025-05-28 19:10 | File: styles/ascii-ui.css
+ */
+
+body.ascii-ui {
+  font-family: monospace, 'Courier New', Courier;
+  background: #111;
+  color: #eee;
+  line-height: 1.6;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body.ascii-ui.dark {
+  background: #000;
+  color: #ccc;
+}
+
+/* FIX: Show header and controls even in ASCII */
+body.ascii-ui footer {
+  display: none;
+}
+
+body.ascii-ui header,
+body.ascii-ui #uiControls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  justify-content: space-between;
+  background: #111;
+  border-bottom: 1px solid #333;
+}
+
+body.ascii-ui main,
+body.ascii-ui #gameArea {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  border-left: 1px solid #444;
+  border-right: 1px solid #444;
+}
+
+body.ascii-ui #sentenceClue,
+body.ascii-ui #sentenceBuilderArea,
+body.ascii-ui #resultSummary,
+body.ascii-ui #xpTracker {
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+  white-space: pre-wrap;
+  border-bottom: 1px dashed #555;
+}
+
+body.ascii-ui .mcq-option {
+  display: block;
+  padding: 0.4rem 0;
+  margin: 0.2rem 0;
+  font-family: inherit;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  text-align: left;
+  color: #66f;
+  cursor: pointer;
+}
+
+body.ascii-ui .mcq-option.correct {
+  color: #3f3;
+}
+
+body.ascii-ui .mcq-option.wrong {
+  color: #f33;
+}
+
+body.ascii-ui .ascii-output {
+  font-family: monospace;
+  background: #000;
+  color: #0f0;
+  padding: 0.5rem;
+  border: 1px solid #080;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+@media screen and (max-width: 500px) {
+  body.ascii-ui {
+    font-size: 14px;
+  }
+}
+
+body.ascii-ui select,
+body.ascii-ui button {
+  font-family: monospace;
+  font-size: 1rem;
+  background: #222;
+  color: #ccc;
+  border: 1px solid #555;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+}
+
+
+
+

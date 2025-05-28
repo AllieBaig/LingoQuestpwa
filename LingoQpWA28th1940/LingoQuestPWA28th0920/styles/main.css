@@ -1,0 +1,230 @@
+
+/**
+ * Main styling for layout containers and core components
+ * Works with minimal-ui.css and variables.css
+ * Optimized for mobile-first, dynamic font, and dark mode
+ * MIT License: https://github.com/AllieBaig/LingoQuest/blob/main/LICENSE
+ * Timestamp: 2025-05-28 15:00 | File: styles/main.css
+ */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: var(--bg);
+  color: var(--fg);
+  font-size: var(--font-base);
+  font-family: system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  overflow-x: hidden;
+}
+
+#topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background-color: rgba(0, 0, 0, 0.04);
+  border-bottom: 1px solid #ccc;
+}
+
+#userInfo {
+  font-weight: 600;
+}
+
+#uiControls {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+#uiControls select,
+#uiControls button {
+  font-size: 0.9em;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #999;
+  background-color: #fff;
+  color: #000;
+}
+
+body.minimal-ui.dark #uiControls select,
+body.minimal-ui.dark #uiControls button {
+  background-color: #222;
+  color: #eee;
+  border-color: #555;
+}
+
+#gameContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+  max-width: 640px;
+  margin: 0 auto;
+  min-height: 60vh;
+}
+
+#sentenceClue,
+#sentenceBuilderArea,
+#resultSummary {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.1);
+}
+
+body.minimal-ui.dark #sentenceClue,
+body.minimal-ui.dark #sentenceBuilderArea,
+body.minimal-ui.dark #resultSummary {
+  background: rgba(30, 30, 30, 0.95);
+  box-shadow: 0 0 0.25rem rgba(255, 255, 255, 0.05);
+}
+
+#sentenceClue {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+#sentenceBuilderArea button {
+  margin: 0.25rem;
+  font-size: 1em;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #888;
+  background: #f0f0f0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#sentenceBuilderArea button:hover {
+  background-color: #e0e0e0;
+}
+
+body.minimal-ui.dark #sentenceBuilderArea button {
+  background-color: #2a2a2a;
+  color: #fff;
+  border-color: #666;
+}
+
+#resultSummary {
+  text-align: center;
+  font-style: italic;
+  min-height: 1.5em;
+}
+
+#footerPanel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-top: 1px solid #ccc;
+  font-size: 0.85em;
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+#xpTracker {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#xpBar {
+  width: 100px;
+  height: 10px;
+  vertical-align: middle;
+}
+
+#levelBadge {
+  background-color: #444;
+  color: #fff;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+body.minimal-ui.dark #levelBadge {
+  background-color: #ccc;
+  color: #111;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  #uiControls {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.3rem;
+  }
+
+#modeSelectorPanel {
+  padding: 1rem;
+  text-align: center;
+}
+
+.modeButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.modeButtons button {
+  font-size: 1em;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background-color: var(--button-bg);
+  color: var(--button-fg);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+body.minimal-ui.dark .modeButtons button {
+  background-color: #222;
+  color: #eee;
+}
+
+
+#errorLogPanel {
+  margin: 1rem auto;
+  padding: 1rem;
+  max-width: 640px;
+  background-color: #fff8e1;
+  border: 1px solid #fbc02d;
+  border-radius: 6px;
+  font-size: 0.9em;
+  color: #333;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+body.minimal-ui.dark #errorLogPanel {
+  background-color: #2b2b1f;
+  color: #ffe082;
+  border-color: #fdd835;
+}
+
+#errorLogPanel h3 {
+  margin-top: 0;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none !important;
+}
+
+
+  #gameContainer {
+    padding: 0.5rem;
+  }
+
+  #sentenceBuilderArea button {
+    font-size: 0.9em;
+    padding: 0.4rem 0.6rem;
+  }
+}

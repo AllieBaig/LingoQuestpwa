@@ -1,0 +1,26 @@
+{
+  "name": "LingoQuest",
+  "short_name": "pwaLingoQuest",
+  "start_url": "/LingoQuestpwa/index.html?source=homescreen",
+  "display": "standalone",
+  "theme_color": "#4a90e2",
+  "background_color": "#ffffff",
+  "orientation": "portrait",
+  "scope": "/",
+  "description": "A gamified multilingual sentence-building adventure.",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["education", "games", "language"],
+  "lang": "en",
+  "id": "/?homescreen=1"
+}

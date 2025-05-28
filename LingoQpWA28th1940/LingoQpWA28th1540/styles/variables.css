@@ -1,0 +1,33 @@
+
+/**
+ * Global CSS variables for color, font scaling, and adaptive UI.
+ * Supports light/dark themes and responsive font sizes.
+ * MIT License: https://github.com/AllieBaig/LingoQuest/blob/main/LICENSE
+ * Timestamp: 2025-05-28 15:15 | File: styles/variables.css
+ */
+
+:root {
+  /* Dynamic font scaling (mobile-aware) */
+  --font-scale: 1vw + 1vh;
+  --font-base: clamp(15px, var(--font-scale), 22px);
+
+  /* Light mode theme */
+  --bg: #f9f9f9;
+  --fg: #111;
+  --accent: #1976d2;
+  --highlight: #e0f7fa;
+  --border: #ccc;
+  --button-bg: #fff;
+  --button-fg: #222;
+}
+
+body.minimal-ui.dark {
+  /* Dark mode override */
+  --bg: #121212;
+  --fg: #eeeeee;
+  --accent: #90caf9;
+  --highlight: #1e1e1e;
+  --border: #444;
+  --button-bg: #1e1e1e;
+  --button-fg: #f5f5f5;
+}

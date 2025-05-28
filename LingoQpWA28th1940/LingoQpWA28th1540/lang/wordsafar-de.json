@@ -1,0 +1,128 @@
+
+[
+  {
+    "category": "Meerestiere",
+    "answer": "Hai",
+    "options": ["Hai", "Adler", "Pferd", "Panda"]
+  },
+  {
+    "category": "Tiere des Dschungels",
+    "answer": "Tiger",
+    "options": ["Tiger", "Kamel", "Eisbär", "Gans"]
+  },
+  {
+    "category": "Fliegende Tiere",
+    "answer": "Adler",
+    "options": ["Adler", "Hund", "Delfin", "Ameise"]
+  },
+  {
+    "category": "Australische Tiere",
+    "answer": "Känguru",
+    "options": ["Känguru", "Löwe", "Hirsch", "Zebra"]
+  },
+  {
+    "category": "Arktische Tiere",
+    "answer": "Pinguin",
+    "options": ["Pinguin", "Papagei", "Schildkröte", "Waschbär"]
+  },
+  {
+    "category": "Savannentiere",
+    "answer": "Giraffe",
+    "options": ["Giraffe", "Schaf", "Bär", "Kaninchen"]
+  },
+  {
+    "category": "Regenwaldtiere",
+    "answer": "Tukan",
+    "options": ["Tukan", "Katze", "Büffel", "Hai"]
+  },
+  {
+    "category": "Nachtaktive Tiere",
+    "answer": "Fledermaus",
+    "options": ["Fledermaus", "Elefant", "Kuh", "Giraffe"]
+  },
+  {
+    "category": "Bauernhoftiere",
+    "answer": "Kuh",
+    "options": ["Kuh", "Wolf", "Seehund", "Falke"]
+  },
+  {
+    "category": "Haustiere",
+    "answer": "Katze",
+    "options": ["Katze", "Pferd", "Eidechse", "Tiger"]
+  },
+  {
+    "category": "Reptilien",
+    "answer": "Schlange",
+    "options": ["Schlange", "Frosch", "Esel", "Maus"]
+  },
+  {
+    "category": "Insekten",
+    "answer": "Ameise",
+    "options": ["Ameise", "Koala", "Ente", "Panther"]
+  },
+  {
+    "category": "Wüstentiere",
+    "answer": "Kamel",
+    "options": ["Kamel", "Seehund", "Panda", "Eule"]
+  },
+  {
+    "category": "Fliegende Insekten",
+    "answer": "Biene",
+    "options": ["Biene", "Wurm", "Schildkröte", "Krabbe"]
+  },
+  {
+    "category": "Meeressäugetiere",
+    "answer": "Delfin",
+    "options": ["Delfin", "Katze", "Affe", "Ziege"]
+  },
+  {
+    "category": "Nagetiere",
+    "answer": "Maus",
+    "options": ["Maus", "Nashorn", "Fuchs", "Schimpanse"]
+  },
+  {
+    "category": "Raubtiere",
+    "answer": "Löwe",
+    "options": ["Löwe", "Kuh", "Schwein", "Schaf"]
+  },
+  {
+    "category": "Arktische Räuber",
+    "answer": "Eisbär",
+    "options": ["Eisbär", "Leopard", "Schwan", "Wal"]
+  },
+  {
+    "category": "Greifvögel",
+    "answer": "Falke",
+    "options": ["Falke", "Pinguin", "Pferd", "Zebra"]
+  },
+  {
+    "category": "Beuteltiere",
+    "answer": "Koala",
+    "options": ["Koala", "Biber", "Hai", "Oktopus"]
+  },
+  {
+    "category": "Schnelle Läufer",
+    "answer": "Gepard",
+    "options": ["Gepard", "Faultier", "Nilpferd", "Eule"]
+  },
+  {
+    "category": "Aasfresser",
+    "answer": "Geier",
+    "options": ["Geier", "Hase", "Wal", "Lama"]
+  },
+  {
+    "category": "Tiere der Tiefsee",
+    "answer": "Oktopus",
+    "options": ["Oktopus", "Kamel", "Ratte", "Esel"]
+  },
+  {
+    "category": "Amphibien",
+    "answer": "Frosch",
+    "options": ["Frosch", "Huhn", "Tintenfisch", "Zebra"]
+  },
+  {
+    "category": "Rudeljäger",
+    "answer": "Wolf",
+    "options": ["Wolf", "Ziege", "Kuh", "Adler"]
+  }
+]

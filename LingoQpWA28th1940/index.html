@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>LingoQuestPWA</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" type="image/svg+xml" href="icons/favicon.svg" />
+  <link rel="stylesheet" href="styles/variables.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/minimal-ui.css" />
+  <link rel="stylesheet" href="styles/ascii-ui.css" />
+</head>
+<body class="minimal-ui ascii-ui ascii-color-default">
+
+  <header id="uiControls" class="ascii-ui-header">
+    <span id="userNickname">👤 Player</span>
+
+    <select id="uiModeToggle" title="UI Mode">
+      <option value="normal">Normal UI</option>
+      <option value="ascii">ASCII UI</option>
+    </select>
+
+    <select id="quizLangModeToggle" title="Quiz Language Mode">
+      <option value="specific">🈯 Specific Language</option>
+      <option value="random">🌍 Random Mix</option>
+    </select>
+    
+    <select id="langChoiceToggle" title="Choose Language">
+  <option value="en">🇬🇧 English</option>
+  <option value="fr">🇫🇷 French</option>
+  <option value="de">🇩🇪 German</option>
+</select>
+
+    <select id="buttonSizeToggle" title="Button Size">
+      <option value="md">🔲 Classic</option>
+      <option value="lg">🟦 Large</option>
+      <option value="xl">🟥 Extra Large</option>
+      <option value="xxl">🧱 Extra Very Large</option>
+    </select>
+
+    <button id="darkModeToggle" title="Toggle Dark Mode">🌓</button>
+
+    <!-- ☰ toggle for ASCII-only preferences -->
+    <div id="asciiSettingsToggle" style="cursor:pointer;">☰</div>
+  </header>
+
+  <!-- Hidden panel for ASCII color + emoji theme -->
+  <div id="asciiSettingsPanel" hidden>
+    <label for="asciiColorToggle">🎨 ASCII Text Theme:</label>
+    <select id="asciiColorToggle" title="ASCII Text Theme">
+      <option value="default">◼ Classic</option>
+      <option value="green">🟢 Matrix Green</option>
+      <option value="amber">🟠 Amber Glow</option>
+      <option value="blue">🔵 Blue Tint</option>
+      <option value="gray">⚪ Neutral Gray</option>
+    </select>
+
+    <label for="asciiEmojiModeToggle">🎭 ASCII Emoji Mode:</label>
+    <select id="asciiEmojiModeToggle" title="ASCII Emoji Mode">
+      <option value="emoji">Emoji Mode</option>
+      <option value="pure">Pure B/W Mode</option>
+    </select>
+  </div>
+
+  <!-- Main Game Containers -->
+  <main id="gameArea">
+    <pre id="asciiOutput" hidden></pre>
+
+    <div id="sentenceClue"></div>
+    <div id="sentenceBuilderArea"></div>
+    <div id="resultSummary"></div>
+    
+   <!-- 🔄 Game Mode Switch Dropdown (visible during gameplay) -->
+<div id="gameSwitchPanel" style="text-align:center; margin:1rem 0;">
+  <select id="gameSwitchDropdown" title="Switch Game Mode">
+    <option disabled selected>🎮 Switch Game</option>
+    <option value="solo">🇫🇷 Solo Mode</option>
+    <option value="mixlingo">🌍 MixLingo</option>
+    <option value="wordrelic">🔑 Word Relic</option>
+    <option value="wordsafari">🦁 Word Safari</option>
+  </select>
+</div>
+
+<!-- ⬅ Shared Back to Menu Button (appears in all game modes) -->
+<div id="backToMenu" style="text-align:center; margin:1rem 0;"></div>
+
+<!-- 🧪 Footer XP Tracker (shared across modes) -->
+<footer id="xpTracker"></footer>
+    
+    <!-- <div id="xpTracker"></div> -->
+    
+  </main>
+  
+  <script type="module" src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+
+[
+  {
+    "category": "Ocean Animals",
+    "answer": "shark",
+    "options": ["shark", "eagle", "horse", "panda"]
+  },
+  {
+    "category": "Jungle Creatures",
+    "answer": "tiger",
+    "options": ["tiger", "camel", "polar bear", "goose"]
+  },
+  {
+    "category": "Flying Animals",
+    "answer": "eagle",
+    "options": ["eagle", "dog", "dolphin", "ant"]
+  },
+  {
+    "category": "Australian Wildlife",
+    "answer": "kangaroo",
+    "options": ["kangaroo", "lion", "deer", "zebra"]
+  },
+  {
+    "category": "Arctic Animals",
+    "answer": "penguin",
+    "options": ["penguin", "parrot", "turtle", "raccoon"]
+  },
+  {
+    "category": "Savanna Animals",
+    "answer": "giraffe",
+    "options": ["giraffe", "sheep", "bear", "rabbit"]
+  },
+  {
+    "category": "Rainforest Creatures",
+    "answer": "toucan",
+    "options": ["toucan", "cat", "buffalo", "shark"]
+  },
+  {
+    "category": "Nocturnal Animals",
+    "answer": "bat",
+    "options": ["bat", "elephant", "cow", "giraffe"]
+  },
+  {
+    "category": "Farm Animals",
+    "answer": "cow",
+    "options": ["cow", "wolf", "seal", "falcon"]
+  },
+  {
+    "category": "Pet Animals",
+    "answer": "cat",
+    "options": ["cat", "horse", "lizard", "tiger"]
+  },
+  {
+    "category": "Reptiles",
+    "answer": "snake",
+    "options": ["snake", "frog", "donkey", "mouse"]
+  },
+  {
+    "category": "Insects",
+    "answer": "ant",
+    "options": ["ant", "koala", "duck", "panther"]
+  },
+  {
+    "category": "Desert Animals",
+    "answer": "camel",
+    "options": ["camel", "seal", "panda", "owl"]
+  },
+  {
+    "category": "Flying Insects",
+    "answer": "bee",
+    "options": ["bee", "worm", "turtle", "crab"]
+  },
+  {
+    "category": "Aquatic Mammals",
+    "answer": "dolphin",
+    "options": ["dolphin", "cat", "monkey", "goat"]
+  },
+  {
+    "category": "Rodents",
+    "answer": "mouse",
+    "options": ["mouse", "rhino", "fox", "chimpanzee"]
+  },
+  {
+    "category": "Predators",
+    "answer": "lion",
+    "options": ["lion", "cow", "pig", "sheep"]
+  },
+  {
+    "category": "Arctic Predators",
+    "answer": "polar bear",
+    "options": ["polar bear", "leopard", "swan", "whale"]
+  },
+  {
+    "category": "Birds of Prey",
+    "answer": "falcon",
+    "options": ["falcon", "penguin", "horse", "zebra"]
+  },
+  {
+    "category": "Marsupials",
+    "answer": "koala",
+    "options": ["koala", "beaver", "shark", "octopus"]
+  },
+  {
+    "category": "Fast Runners",
+    "answer": "cheetah",
+    "options": ["cheetah", "sloth", "hippo", "owl"]
+  },
+  {
+    "category": "Scavengers",
+    "answer": "vulture",
+    "options": ["vulture", "rabbit", "whale", "llama"]
+  },
+  {
+    "category": "Deep Sea Creatures",
+    "answer": "octopus",
+    "options": ["octopus", "camel", "rat", "donkey"]
+  },
+  {
+    "category": "Amphibians",
+    "answer": "frog",
+    "options": ["frog", "chicken", "squid", "zebra"]
+  },
+  {
+    "category": "Pack Hunters",
+    "answer": "wolf",
+    "options": ["wolf", "goat", "cow", "eagle"]
+  }
+]

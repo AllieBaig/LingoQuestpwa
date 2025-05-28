@@ -1,0 +1,128 @@
+
+[
+  {
+    "clue": "👑🐝💡👶",
+    "answer": "queenbee",
+    "options": ["queenbee", "buzzlight", "royalkid", "babybee"]
+  },
+  {
+    "clue": "🌍🔥🚫🧊",
+    "answer": "globalwarming",
+    "options": ["globalwarming", "cooldown", "iceage", "fireworld"]
+  },
+  {
+    "clue": "📚🧠⚡🎓",
+    "answer": "knowledge",
+    "options": ["knowledge", "brainpower", "schoolshock", "lightlearn"]
+  },
+  {
+    "clue": "🎯🧭🔍🏹",
+    "answer": "focus",
+    "options": ["focus", "target", "hunt", "searchshot"]
+  },
+  {
+    "clue": "🔒❤️🗝️🤫",
+    "answer": "secretlove",
+    "options": ["secretlove", "lockedheart", "hiddendesire", "forbidden"]
+  },
+  {
+    "clue": "💤📦📬📮",
+    "answer": "dreambox",
+    "options": ["dreambox", "mailnight", "napdelivery", "sleepcrate"]
+  },
+  {
+    "clue": "👟🕒🏃‍♂️📍",
+    "answer": "deadline",
+    "options": ["deadline", "timetrip", "rushspot", "runnergoal"]
+  },
+  {
+    "clue": "🕵️‍♂️🎭💭🧩",
+    "answer": "mystery",
+    "options": ["mystery", "detective", "secretmask", "riddlemind"]
+  },
+  {
+    "clue": "🎸🔥🕺🎤",
+    "answer": "rockstar",
+    "options": ["rockstar", "hotmusic", "dancesong", "stagefire"]
+  },
+  {
+    "clue": "🌙🚀🛸🪐",
+    "answer": "spacetravel",
+    "options": ["spacetravel", "moontrip", "alienride", "cosmoshift"]
+  },
+  {
+    "clue": "⏰😴🐓🌅",
+    "answer": "morning",
+    "options": ["morning", "wakecall", "roosterday", "sunstart"]
+  },
+  {
+    "clue": "🐉🔥🏰⚔️",
+    "answer": "dragonbattle",
+    "options": ["dragonbattle", "castleflame", "swordbeast", "epicquest"]
+  },
+  {
+    "clue": "🌪️🚪👻🎃",
+    "answer": "hauntedhouse",
+    "options": ["hauntedhouse", "ghoststorm", "scareportal", "pumpkinroom"]
+  },
+  {
+    "clue": "🌧️🌊🚢⚓",
+    "answer": "seastorm",
+    "options": ["seastorm", "rainboat", "oceanrage", "navycrash"]
+  },
+  {
+    "clue": "🌲🧭🚶‍♂️🥾",
+    "answer": "adventure",
+    "options": ["adventure", "forestwalk", "wildmap", "trailhunt"]
+  },
+  {
+    "clue": "🐦📢🎶🎼",
+    "answer": "songbird",
+    "options": ["songbird", "tweetnote", "musicchirp", "melodybird"]
+  },
+  {
+    "clue": "🎮👾👨‍💻🧠",
+    "answer": "gamerbrain",
+    "options": ["gamerbrain", "mindplay", "hackergame", "neurocontroller"]
+  },
+  {
+    "clue": "🌸👁️🧘‍♂️💫",
+    "answer": "zenmind",
+    "options": ["zenmind", "calmfocus", "petalsoul", "meditate"]
+  },
+  {
+    "clue": "👶💡🌱📈",
+    "answer": "growth",
+    "options": ["growth", "babybrain", "ideaexpand", "risechild"]
+  },
+  {
+    "clue": "📅🕓🚀🎯",
+    "answer": "schedulelaunch",
+    "options": ["schedulelaunch", "calendarblast", "timemission", "goalboost"]
+  },
+  {
+    "clue": "👓📖💭💬",
+    "answer": "literacy",
+    "options": ["literacy", "readmind", "textdream", "bookthink"]
+  },
+  {
+    "clue": "🧊💔🔥🌪️",
+    "answer": "emotions",
+    "options": ["emotions", "breakstorm", "coldlove", "heartclash"]
+  },
+  {
+    "clue": "🧬🧪💡🤯",
+    "answer": "discovery",
+    "options": ["discovery", "brainlab", "geniusidea", "explosionfind"]
+  },
+  {
+    "clue": "🐾🦓🌍🍃",
+    "answer": "wildlife",
+    "options": ["wildlife", "safarifoot", "animalplanet", "jungletrack"]
+  },
+  {
+    "clue": "🏃‍♂️⏱️🥇🏁",
+    "answer": "speedwin",
+    "options": ["speedwin", "fastgoal", "racerace", "timetracker"]
+  }
+]
