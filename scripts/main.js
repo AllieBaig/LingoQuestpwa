@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         switch (mode) {
           case 'mixlingo': {
             const { initMixLingo } = await import('./lingoquest/mixlingo.js');
-            initMixLingo(lang);
+            initMixLingoMode(lang);
             break;
           }
           case 'wordrelic': {
