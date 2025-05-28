@@ -1,0 +1,153 @@
+
+[
+  {
+    "category": "name",
+    "prompt": "Welcher dieser Namen ist ein Vorname?",
+    "options": ["Tisch", "Lena", "Berlin"],
+    "answer": "Lena"
+  },
+  {
+    "category": "animal",
+    "prompt": "Welches dieser Wörter bezeichnet ein Tier?",
+    "options": ["Hund", "Haus", "Buch"],
+    "answer": "Hund"
+  },
+  {
+    "category": "place",
+    "prompt": "Welches dieser Wörter ist ein Ort?",
+    "options": ["Hamburg", "Apfel", "Katze"],
+    "answer": "Hamburg"
+  },
+  {
+    "category": "thing",
+    "prompt": "Was ist ein Gegenstand?",
+    "options": ["Lampe", "Fuchs", "Susi"],
+    "answer": "Lampe"
+  },
+  {
+    "category": "name",
+    "prompt": "Welcher ist ein männlicher Vorname?",
+    "options": ["Peter", "Banane", "Fluss"],
+    "answer": "Peter"
+  },
+  {
+    "category": "animal",
+    "prompt": "Welches Tier lebt im Wasser?",
+    "options": ["Fisch", "Bett", "Uhr"],
+    "answer": "Fisch"
+  },
+  {
+    "category": "place",
+    "prompt": "Was ist eine Stadt?",
+    "options": ["Auto", "München", "Katze"],
+    "answer": "München"
+  },
+  {
+    "category": "thing",
+    "prompt": "Was kann man tragen?",
+    "options": ["Jacke", "Hund", "Himmel"],
+    "answer": "Jacke"
+  },
+  {
+    "category": "name",
+    "prompt": "Welche dieser Optionen ist ein Mädchenname?",
+    "options": ["Lisa", "Sonne", "Stuhl"],
+    "answer": "Lisa"
+  },
+  {
+    "category": "animal",
+    "prompt": "Welches ist ein Insekt?",
+    "options": ["Biene", "Kuh", "Topf"],
+    "answer": "Biene"
+  },
+  {
+    "category": "place",
+    "prompt": "Welcher dieser Orte ist ein Land?",
+    "options": ["Deutschland", "Suppe", "Luisa"],
+    "answer": "Deutschland"
+  },
+  {
+    "category": "thing",
+    "prompt": "Welches ist ein Werkzeug?",
+    "options": ["Hammer", "Schwein", "Lisa"],
+    "answer": "Hammer"
+  },
+  {
+    "category": "name",
+    "prompt": "Welcher Name ist weiblich?",
+    "options": ["Anna", "Buch", "Teller"],
+    "answer": "Anna"
+  },
+  {
+    "category": "animal",
+    "prompt": "Was ist ein Tier?",
+    "options": ["Pferd", "Tür", "Karotte"],
+    "answer": "Pferd"
+  },
+  {
+    "category": "place",
+    "prompt": "Was ist eine Hauptstadt?",
+    "options": ["Berlin", "Gabel", "Julia"],
+    "answer": "Berlin"
+  },
+  {
+    "category": "thing",
+    "prompt": "Welches dieser Wörter ist ein Objekt?",
+    "options": ["Stuhl", "Hase", "Paul"],
+    "answer": "Stuhl"
+  },
+  {
+    "category": "name",
+    "prompt": "Welches ist ein Jungenname?",
+    "options": ["Max", "Küche", "Fisch"],
+    "answer": "Max"
+  },
+  {
+    "category": "animal",
+    "prompt": "Welches dieser Tiere fliegt?",
+    "options": ["Adler", "Stein", "Sofa"],
+    "answer": "Adler"
+  },
+  {
+    "category": "place",
+    "prompt": "Was ist ein Kontinent?",
+    "options": ["Europa", "Pfanne", "Hund"],
+    "answer": "Europa"
+  },
+  {
+    "category": "thing",
+    "prompt": "Was ist ein Möbelstück?",
+    "options": ["Tisch", "Katze", "Nina"],
+    "answer": "Tisch"
+  },
+  {
+    "category": "name",
+    "prompt": "Was ist ein typischer deutscher Name?",
+    "options": ["Heinz", "Computer", "Apfel"],
+    "answer": "Heinz"
+  },
+  {
+    "category": "animal",
+    "prompt": "Welches ist ein wildes Tier?",
+    "options": ["Löwe", "Handy", "Straße"],
+    "answer": "Löwe"
+  },
+  {
+    "category": "place",
+    "prompt": "Was ist ein Dorf?",
+    "options": ["Altenfeld", "Auto", "Stift"],
+    "answer": "Altenfeld"
+  },
+  {
+    "category": "thing",
+    "prompt": "Was benutzt man in der Schule?",
+    "options": ["Bleistift", "Pferd", "Lena"],
+    "answer": "Bleistift"
+  },
+  {
+    "category": "name",
+    "prompt": "Welcher dieser Begriffe ist ein Vorname?",
+    "options": ["Klara", "Tasche", "Zug"],
+    "answer": "Klara"
+  }
+]
