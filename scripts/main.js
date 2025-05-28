@@ -26,7 +26,6 @@ const ui = params.get('ui') || 'normal';
 if (!mode) {
   // If no mode is selected in URL, show the main menu
   renderGameMenu();
-  return;
 }
 
 // Apply UI mode and dark mode settings
