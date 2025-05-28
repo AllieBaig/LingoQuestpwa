@@ -13,11 +13,15 @@ let xpBarEl, levelBadgeEl, xpLabelEl;
 let profile;
 
 export function updateXPDisplay(currentXP = 0) {
-  if (!xpBarEl) {
+  // Attempt to fetch DOM elements if not already cached
+  if (!xpBarEl || !levelBadgeEl || !xpLabelEl) {
     xpBarEl = document.querySelector('#xpBar');
     levelBadgeEl = document.querySelector('#levelBadge');
     xpLabelEl = document.querySelector('#xpLabel');
   }
+
+  // Safeguard: Exit if any elements are missing
+  if (!xpBarEl || !levelBadgeEl || !xpLabelEl) return;
 
   profile = getProfile();
   const xp = currentXP ?? profile.xp ?? 0;
