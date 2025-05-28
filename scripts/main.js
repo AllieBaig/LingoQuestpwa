@@ -100,7 +100,12 @@ document.addEventListener('DOMContentLoaded', () => {
         location.href = targetUrl;
       });
     });
-  } else {
-    loadGameMode(mode, lang, ui); // ⬅ keep this line as-is
+  } import { showMainMenu } from './utils/mainMenu.js';
+
+if (!params.has('mode')) {
+  showMainMenu(ui);
+} else {
+  loadGameMode(mode, lang, ui);
+} // ⬅ keep this line as-is
   }
 });
