@@ -70,7 +70,9 @@ export function initMixLingoMode(level = 'easy', lang = 'fr') {
   };
 }
 
-// ✅ Optional wrapper for main.js compatibility
+/* // ✅ Optional wrapper for main.js compatibility
 export function initMixLingo(lang = 'fr') {
   initMixLingoMode('easy', lang);
 }
+*/
+
