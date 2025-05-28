@@ -190,6 +190,35 @@ body.minimal-ui.dark .modeButtons button {
 }
 
 
+#errorLogPanel {
+  margin: 1rem auto;
+  padding: 1rem;
+  max-width: 640px;
+  background-color: #fff8e1;
+  border: 1px solid #fbc02d;
+  border-radius: 6px;
+  font-size: 0.9em;
+  color: #333;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+body.minimal-ui.dark #errorLogPanel {
+  background-color: #2b2b1f;
+  color: #ffe082;
+  border-color: #fdd835;
+}
+
+#errorLogPanel h3 {
+  margin-top: 0;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none !important;
+}
+
+
   #gameContainer {
     padding: 0.5rem;
   }
