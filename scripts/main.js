@@ -22,10 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Apply UI mode and dark mode settings
   applyUIMode(ui);
 
-  // Load and show user profile
-  const profile = loadUserProfile();
-  document.querySelector('#userNickname').textContent = `👤 ${profile.nickname}`;
-  updateXPDisplay(profile.xp || 0);
+  // ------------Load and show user profile---------------
+  ///const profile = loadUserProfile();
+  //document.querySelector('#userNickname').textContent = `👤 ${profile.nickname}`;
+  //updateXPDisplay(profile.xp || 0);
 
   // Display version info
   //initVersionDisplay();
