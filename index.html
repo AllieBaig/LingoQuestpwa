@@ -70,8 +70,26 @@
     <div id="sentenceClue"></div>
     <div id="sentenceBuilderArea"></div>
     <div id="resultSummary"></div>
-    <div id="backToMenu" style="text-align:center; margin:1rem 0;"></div>
-    <div id="xpTracker"></div>
+    
+   <!-- 🔄 Game Mode Switch Dropdown (visible during gameplay) -->
+<div id="gameSwitchPanel" style="text-align:center; margin:1rem 0;">
+  <select id="gameSwitchDropdown" title="Switch Game Mode">
+    <option disabled selected>🎮 Switch Game</option>
+    <option value="solo">🇫🇷 Solo Mode</option>
+    <option value="mixlingo">🌍 MixLingo</option>
+    <option value="wordrelic">🔑 Word Relic</option>
+    <option value="wordsafari">🦁 Word Safari</option>
+  </select>
+</div>
+
+<!-- ⬅ Shared Back to Menu Button (appears in all game modes) -->
+<div id="backToMenu" style="text-align:center; margin:1rem 0;"></div>
+
+<!-- 🧪 Footer XP Tracker (shared across modes) -->
+<footer id="xpTracker"></footer>
+    
+    <!-- <div id="xpTracker"></div> -->
+    
   </main>
   
   <script type="module" src="scripts/main.js"></script>
