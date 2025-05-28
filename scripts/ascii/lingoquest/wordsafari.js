@@ -6,7 +6,7 @@
  */
 
 import { loadQuestionsForMode } from '../../utils/questionPool.js';
-import { renderClue, renderMCQ, renderSummary } from '../../utils/asciiRenderer.js';
+import { renderClue, renderMCQ, renderResult } from '../../utils/asciiRenderer.js';
 import { awardXP } from '../../utils/xpTracker.js';
 
 export async function initAsciiWordSafari(lang = 'fr') {
@@ -15,7 +15,7 @@ export async function initAsciiWordSafari(lang = 'fr') {
 
   function next() {
     if (index >= questions.length) {
-      renderSummary('[🏁] Safari terminé !');
+      renderResult('[🏁] Safari terminé !', 'info');
       return;
     }
 
@@ -23,11 +23,11 @@ export async function initAsciiWordSafari(lang = 'fr') {
     renderClue(`🌿 Catégorie: ${q.category}`);
 
     renderMCQ(q.options, q.answer, (correct) => {
-      renderSummary(correct ? '[🦁] Bien joué ! +10 XP' : '[❌] Mauvaise réponse.');
+      renderResult(correct ? '[🦁] Bien joué ! +10 XP' : '[❌] Mauvaise réponse.', correct ? 'success' : 'error');
       if (correct) awardXP(10);
       index++;
       setTimeout(() => {
-        renderSummary('');
+        renderResult('');
         next();
       }, 1600);
     });
@@ -35,4 +35,3 @@ export async function initAsciiWordSafari(lang = 'fr') {
 
   next();
 }
-
