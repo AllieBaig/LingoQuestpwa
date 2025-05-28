@@ -1,13 +1,127 @@
-
 [
   {
-    "category": "African Animals",
-    "answer": "girafe",
-    "options": ["girafe", "pomme", "chat", "voiture"]
+    "category": "Animaux marins",
+    "answer": "requin",
+    "options": ["requin", "aigle", "cheval", "panda"]
   },
   {
-    "category": "Ocean Creatures",
-    "answer": "requin",
-    "options": ["requin", "canard", "plage", "table"]
+    "category": "Animaux de la jungle",
+    "answer": "tigre",
+    "options": ["tigre", "chameau", "ours polaire", "oie"]
+  },
+  {
+    "category": "Animaux volants",
+    "answer": "aigle",
+    "options": ["aigle", "chien", "dauphin", "fourmi"]
+  },
+  {
+    "category": "Faune australienne",
+    "answer": "kangourou",
+    "options": ["kangourou", "lion", "cerf", "zèbre"]
+  },
+  {
+    "category": "Animaux de l'Arctique",
+    "answer": "pingouin",
+    "options": ["pingouin", "perroquet", "tortue", "raton laveur"]
+  },
+  {
+    "category": "Animaux de la savane",
+    "answer": "girafe",
+    "options": ["girafe", "mouton", "ours", "lapin"]
+  },
+  {
+    "category": "Animaux de la forêt tropicale",
+    "answer": "toucan",
+    "options": ["toucan", "chat", "buffle", "requin"]
+  },
+  {
+    "category": "Animaux nocturnes",
+    "answer": "chauve-souris",
+    "options": ["chauve-souris", "éléphant", "vache", "girafe"]
+  },
+  {
+    "category": "Animaux de la ferme",
+    "answer": "vache",
+    "options": ["vache", "loup", "phoque", "faucon"]
+  },
+  {
+    "category": "Animaux domestiques",
+    "answer": "chat",
+    "options": ["chat", "cheval", "lézard", "tigre"]
+  },
+  {
+    "category": "Reptiles",
+    "answer": "serpent",
+    "options": ["serpent", "grenouille", "âne", "souris"]
+  },
+  {
+    "category": "Insectes",
+    "answer": "fourmi",
+    "options": ["fourmi", "koala", "canard", "panthère"]
+  },
+  {
+    "category": "Animaux du désert",
+    "answer": "chameau",
+    "options": ["chameau", "phoque", "panda", "hibou"]
+  },
+  {
+    "category": "Insectes volants",
+    "answer": "abeille",
+    "options": ["abeille", "ver", "tortue", "crabe"]
+  },
+  {
+    "category": "Mammifères aquatiques",
+    "answer": "dauphin",
+    "options": ["dauphin", "chat", "singe", "chèvre"]
+  },
+  {
+    "category": "Rongeurs",
+    "answer": "souris",
+    "options": ["souris", "rhinocéros", "renard", "chimpanzé"]
+  },
+  {
+    "category": "Prédateurs",
+    "answer": "lion",
+    "options": ["lion", "vache", "cochon", "mouton"]
+  },
+  {
+    "category": "Prédateurs arctiques",
+    "answer": "ours polaire",
+    "options": ["ours polaire", "léopard", "cygne", "baleine"]
+  },
+  {
+    "category": "Oiseaux de proie",
+    "answer": "faucon",
+    "options": ["faucon", "pingouin", "cheval", "zèbre"]
+  },
+  {
+    "category": "Marsupiaux",
+    "answer": "koala",
+    "options": ["koala", "castor", "requin", "pieuvre"]
+  },
+  {
+    "category": "Animaux rapides",
+    "answer": "guépard",
+    "options": ["guépard", "paresseux", "hippopotame", "hibou"]
+  },
+  {
+    "category": "Charognards",
+    "answer": "vautour",
+    "options": ["vautour", "lapin", "baleine", "lama"]
+  },
+  {
+    "category": "Animaux des grands fonds",
+    "answer": "pieuvre",
+    "options": ["pieuvre", "chameau", "rat", "âne"]
+  },
+  {
+    "category": "Amphibiens",
+    "answer": "grenouille",
+    "options": ["grenouille", "poulet", "calmar", "zèbre"]
+  },
+  {
+    "category": "Chasseurs en meute",
+    "answer": "loup",
+    "options": ["loup", "chèvre", "vache", "aigle"]
   }
 ]
