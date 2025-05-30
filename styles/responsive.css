@@ -1,0 +1,94 @@
+
+/**
+ * Responsive Styles for LingoQuestPWA
+ * Scales fonts, buttons, and layouts based on screen size
+ * MIT License: https://github.com/AllieBaig/LingoQuest/blob/main/LICENSE
+ * Timestamp: 2025-05-30 18:20 | File: styles/responsive.css
+ */
+
+/* --- Base Scaling (mobile-first) --- */
+html {
+  font-size: calc(14px + 0.35vw);
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* --- Flexible Containers --- */
+#gameArea,
+#gameMenu,
+#sentenceBuilderArea,
+#resultSummary {
+  max-width: 700px;
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+#sentenceClue {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+/* --- Responsive Buttons and Selects --- */
+button,
+select {
+  font-size: 1rem;
+  padding: 0.6em 1em;
+  border-radius: 0.5em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mcq-option {
+  font-size: 1rem;
+  padding: 0.6em;
+  margin-bottom: 0.4em;
+}
+
+.back-button {
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 0.75em;
+}
+
+/* --- Responsive Header/Footer --- */
+#uiControls,
+#xpTracker {
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+/* --- Mobile Overrides --- */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  #uiControls,
+  #xpTracker {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  button,
+  select {
+    font-size: 1rem;
+  }
+
+  .mcq-option {
+    font-size: 1rem;
+  }
+}
