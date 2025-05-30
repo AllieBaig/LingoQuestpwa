@@ -7,6 +7,9 @@
  */
 
 import { generateMCQ } from '../utils/mcqEngine.js';
+import { hideUIHeader } from '../utils/uiHeader.js';
+import { hideUIFooter } from '../utils/uiFooter.js';
+
 
 export function initMixLingoMode(level = 'easy', lang = 'fr') {
   const clueEl = document.getElementById('sentenceClue');
