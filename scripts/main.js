@@ -11,6 +11,8 @@ import { loadUserProfile } from '../tools/profileManager.js';
 import { initVersionDisplay } from './utils/version.js';
 import { updateXPDisplay } from './utils/xpTracker.js';
 import { renderGameMenu } from './utils/menuRenderer.js';
+import { initGameSwitchListener } from './utils/gameSwitchHandler.js';
+
 
 // Read URL parameters
 const params = new URLSearchParams(location.search);
@@ -24,8 +26,11 @@ if (!mode) {
   loadUserProfile();
   initVersionDisplay();
   updateXPDisplay();
+  initGameSwitchListener();
   
 }
+
+
 
 // Else: load mode
 const lang = params.get('lang') || localStorage.getItem('selectedLang') || 'fr';
