@@ -5,6 +5,7 @@
  * Timestamp: 2025-05-30 16:00 | File: scripts/main.js
  */
 
+import { renderUIHeader } from './utils/uiHeader.js'; // adjust path if needed
 import { initAppMenuUI } from './app/initApp.js';
 import { applyUIMode } from './utils/uiModeManager.js';
 import { loadUserProfile } from '../tools/profileManager.js';
