@@ -1,0 +1,105 @@
+/* ✅ Game Area Responsive Centering */
+#gameArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  padding: 1rem;
+}
+
+/* ✅ Game Menu Buttons Layout */
+.menu-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.menu-buttons .game-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 0.5rem;
+  border: 2px solid var(--border);
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  transition: 0.3s;
+  width: 90%;
+  max-width: 320px;
+}
+
+.menu-buttons .game-btn:hover {
+  transform: scale(1.05);
+}
+
+/* ✅ Submit Button Visibility */
+#submitSentence {
+  margin-top: 1rem;
+}
+
+/* ✅ Hide Submit if No Question */
+#submitSentence:disabled {
+  display: none !important;
+}
+
+/* ✅ Result Styling */
+#resultSummary {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* ✅ Back Button */
+.back-button {
+  margin-top: 1rem;
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.4rem;
+}
+
+/* ✅ Responsive Font Scaling */
+body {
+  font-size: clamp(16px, 1.8vw, 20px);
+  line-height: 1.5;
+}
+
+/* ✅ Responsive Header */
+header,
+#asciiSettingsPanel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  justify-content: center;
+}
+
+header select,
+header button {
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  padding: 0.3rem 0.5rem;
+}
+
+/* ✅ Minimal UI Button Sizes */
+body.btn-lg .game-btn {
+  font-size: 1.2rem;
+  padding: 1rem 1.5rem;
+}
+
+body.btn-xl .game-btn {
+  font-size: 1.4rem;
+  padding: 1.2rem 2rem;
+}
+
+body.btn-xxl .game-btn {
+  font-size: 1.6rem;
+  padding: 1.4rem 2.5rem;
+}
+
+/* ✅ XP Footer */
+#xpTracker {
+  margin-top: auto;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 1rem;
+  opacity: 0.85;
+}
