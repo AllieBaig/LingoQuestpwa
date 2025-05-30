@@ -92,6 +92,8 @@ applyUIMode();
 loadUserProfile();
 initVersionDisplay();
 updateXPDisplay();
+initStaticThemeSwitcher();
+
 
 if (mode === 'mixlingo') {
   if (ui === 'ascii') {
