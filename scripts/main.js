@@ -11,6 +11,18 @@ import { loadUserProfile } from '../tools/profileManager.js';
 import { initVersionDisplay } from './utils/version.js';
 import { updateXPDisplay } from './utils/xpTracker.js';
 
+function startSoloMode() { console.log('Solo Mode placeholder'); }
+function startMixLingoMode() { console.log('MixLingo placeholder'); }
+function startWordRelicMode() { console.log('Word Relic placeholder'); }
+function startWordSafariMode() { console.log('Word Safari placeholder'); }
+function startNAPTMode() { console.log('NAPT placeholder'); }
+function startTrailMode() { console.log('Trail placeholder'); }
+function startVsComputerMode() { console.log('Vs Computer placeholder'); }
+function startNearbyMode() { console.log('Nearby Mode placeholder'); }
+
+
+
+
 // Get params
 const params = new URLSearchParams(location.search);
 const rawMode = params.get('mode');
