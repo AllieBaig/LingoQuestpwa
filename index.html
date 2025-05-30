@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,27 +14,11 @@
 </head>
 <body class="minimal-ui ascii-ui ascii-color-default">
 
-  <!-- <header id="uiControls" class="ascii-ui-header"> -->
+  <!-- ✅ Top Controls UI Header (inserted via uiHeader.js if needed) -->
+  <header id="uiControls" class="ascii-ui-header">
     <span id="userNickname">👤 Player</span>
 
-<!--
-  <select id="uiModeToggle" title="UI Mode">
-      <option value="normal">Normal UI</option>
-      <option value="ascii">ASCII UI</option>
-    </select>
-
-    <select id="quizLangModeToggle" title="Quiz Language Mode">
-      <option value="specific">🈯 Specific Language</option>
-      <option value="random">🌍 Random Mix</option>
-    </select>
-    
-    <select id="langChoiceToggle" title="Choose Language">
-  <option value="en">🇬🇧 English</option>
-  <option value="fr">🇫🇷 French</option>
-  <option value="de">🇩🇪 German</option>
-</select>
--->
-  
+    <!-- Optional buttons from shared header -->
     <select id="buttonSizeToggle" title="Button Size">
       <option value="md">🔲 Classic</option>
       <option value="lg">🟦 Large</option>
@@ -43,25 +26,22 @@
       <option value="xxl">🧱 Extra Very Large</option>
     </select>
 
-<!-- 🎨 Theme Switcher Dropdown -->
-<label for="themeSelector" class="sr-only">Theme</label>
-<select id="themeSelector" name="themeSelector" aria-label="Theme">
-  <option disabled selected>🎨 Choose Theme</option>
-  <option value="windows98">💾 Windows 98</option>
-  <option value="windowsxp">🪟 Windows XP</option>
-  <option value="android">🤖 Android</option>
-  <option value="ios">🍏 iOS</option>
-  <option value="redhat">🎩 Red Hat</option>
-  <option value="ubuntu">🔥 Ubuntu</option>
-</select>
+    <label for="themeSelector" class="sr-only">Theme</label>
+    <select id="themeSelector" name="themeSelector" aria-label="Theme">
+      <option disabled selected>🎨 Choose Theme</option>
+      <option value="windows98">💾 Windows 98</option>
+      <option value="windowsxp">🪟 Windows XP</option>
+      <option value="android">🤖 Android</option>
+      <option value="ios">🍏 iOS</option>
+      <option value="redhat">🎩 Red Hat</option>
+      <option value="ubuntu">🔥 Ubuntu</option>
+    </select>
 
     <button id="darkModeToggle" title="Toggle Dark Mode">🌓</button>
-
-    <!-- ☰ toggle for ASCII-only preferences -->
     <div id="asciiSettingsToggle" style="cursor:pointer;">☰</div>
   </header>
 
-  <!-- Hidden panel for ASCII color + emoji theme -->
+  <!-- ✅ ASCII settings panel -->
   <div id="asciiSettingsPanel" hidden>
     <label for="asciiColorToggle">🎨 ASCII Text Theme:</label>
     <select id="asciiColorToggle" title="ASCII Text Theme">
@@ -79,58 +59,34 @@
     </select>
   </div>
 
-  <!-- Main Game Containers -->
+  <!-- ✅ Game Area -->
   <main id="gameArea">
-    <pre id="asciiOutput" hidden></pre>
-
-
+    <pre id="asciiOutput" class="ascii-only" hidden></pre>
 
     <div id="sentenceClue"></div>
     <div id="sentenceBuilderArea"></div>
     <button id="submitSentence" class="game-btn">✅ Submit Answer</button>
     <div id="resultSummary"></div>
 
-    
-    <!-- Game Menu Container -->
-<div id="gameMenu" class="menu-buttons">
-  <!-- <button id="btnSolo" class="game-btn">🎯 Solo Mode</button> 
-  <button id="btnVsComputer" class="game-btn">🤖 Play vs Computer</button>
-  <button id="btnNearby" class="game-btn">📡 Nearby Mode</button>
-  -->
-  <button id="btnMixLingo" class="game-btn">🌍 MixLingo</button>
-  <button id="btnWordRelic" class="game-btn">🧩 Word Relic</button>
-  <button id="btnWordSafari" class="game-btn">🦁 Word Safari</button>
-  <button id="btnNAPT" class="game-btn">📚 Napt Mode</button>
-  <button id="btnTrail" class="game-btn">🏞️ Trail of Letters</button>
-</div>
+    <!-- ✅ Game Buttons -->
+    <div id="gameMenu" class="menu-buttons">
+      <button id="btnMixLingo" class="game-btn">🌍 MixLingo</button>
+      <button id="btnWordRelic" class="game-btn">🧩 Word Relic</button>
+      <button id="btnWordSafari" class="game-btn">🦁 Word Safari</button>
+      <button id="btnNAPT" class="game-btn">📚 Napt Mode</button>
+      <button id="btnTrail" class="game-btn">🏞️ Trail of Letters</button>
+    </div>
 
-     
-   <!-- 🔄 Game Mode Switch Dropdown (visible during gameplay) -->
-<!--
-    <div id="gameSwitchPanel" style="text-align:center; margin:1rem 0;">
-  <select id="gameSwitchDropdown" title="Switch Game Mode">
-    <option disabled selected>🎮 Switch Game</option>
-    <option value="solo">🇫🇷 Solo Mode</option>
-    <option value="mixlingo">🌍 MixLingo</option>
-    <option value="wordrelic">🔑 Word Relic</option>
-    <option value="wordsafari">🦁 Word Safari</option>
-  </select>
-</div>
--->
+    <!-- ✅ Back to Menu button -->
+    <div style="text-align:center; margin:1rem 0;">
+      <button id="backToMenu" class="back-button">⬅️ Back to Menu</button>
+    </div>
 
-
-<!-- ⬅ Shared Back to Menu Button (appears in all game modes) -->
-<div id="backToMenu" style="text-align:center; margin:1rem 0;"></div>
-<button id="backToMenu" class="back-button">⬅️ Back to Menu</button>
-
-
-<!-- 🧪 Footer XP Tracker (shared across modes) -->
-<footer id="xpTracker"></footer>
-    
-    <!-- <div id="xpTracker"></div> -->
-    
+    <!-- ✅ Footer XP Tracker -->
+    <footer id="xpTracker"></footer>
   </main>
-  
+
+  <!-- ✅ App Bootstrap -->
   <script type="module" src="scripts/main.js"></script>
 </body>
 </html>
