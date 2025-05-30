@@ -1,0 +1,46 @@
+
+/*
+ * css/modules/_xp_tracker.css
+ * Purpose: Styles for the XP tracker UI elements (XP bar, text, streak badge).
+ * Usage: Imported by style.css.
+ * Timestamp: 2025-05-29 03:30:30 PM BST
+ * License: MIT License (https://opensource.org/licenses/MIT)
+ * Copyright (c) 2025 AllieBaig (https://alliebaig.github.io/LingoQuest1/)
+ */
+
+#xpTracker {
+    display: flex;
+    align-items: center;
+    gap: var(--padding-md);
+    margin-bottom: var(--padding-lg);
+    padding: var(--padding-sm) var(--padding-md);
+    background-color: var(--card-background);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.xp-bar {
+    flex-grow: 1;
+    height: 15px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+body.dark .xp-bar {
+    background-color: #555;
+}
+
+.xp-fill {
+    height: 100%;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    transition: width 0.5s ease-out;
+}
+
+.xp-text, .streak-badge {
+    font-weight: var(--font-weight-bold);
+    color: var(--text-color);
+    font-size: var(--font-size-body);
+}

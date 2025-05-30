@@ -1,0 +1,96 @@
+
+/*
+ * theme-christmas-ui.css
+ * Purpose: Festive Christmas theme for LingoQuest Normal UI (non-ASCII).
+ * Applies to: body.christmas-ui
+ * Timestamp: 2025-05-30
+ * License: MIT License (https://opensource.org/licenses/MIT)
+ */
+
+body.christmas-ui {
+    background-color: #fffaf0;
+    color: #222;
+    font-family: 'Segoe UI', sans-serif;
+    background-image: linear-gradient(to bottom, #fff0f0, #f0fff0);
+}
+
+/* Header and footer festive style */
+body.christmas-ui header,
+body.christmas-ui footer {
+    background-color: #c62828;
+    color: #fff;
+    border-bottom: 4px solid #388e3c;
+}
+
+body.christmas-ui header h1::before {
+    content: "🎄 ";
+}
+body.christmas-ui header h1::after {
+    content: " 🎁";
+}
+
+/* Buttons */
+body.christmas-ui button {
+    background-color: #388e3c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+body.christmas-ui button:hover {
+    background-color: #2e7d32;
+}
+
+/* MCQ options */
+body.christmas-ui .mcq-option {
+    background-color: #e8f5e9;
+    border: 2px solid #81c784;
+    border-radius: 6px;
+    color: #1b5e20;
+    font-weight: 500;
+}
+
+body.christmas-ui .mcq-option.correct {
+    background-color: #a5d6a7;
+    border-color: #43a047;
+}
+
+body.christmas-ui .mcq-option.incorrect {
+    background-color: #ffcdd2;
+    border-color: #e53935;
+    color: #b71c1c;
+}
+
+/* Game area styling */
+body.christmas-ui .game-area {
+    background-color: #f3f3f3;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+/* XP and status bar */
+body.christmas-ui .xp-bar {
+    background-color: #f0f4c3;
+    border: 1px solid #c0ca33;
+}
+body.christmas-ui .xp-fill {
+    background-color: #81c784;
+}
+body.christmas-ui .xp-text,
+body.christmas-ui .streak-badge {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+/* Footer version info */
+body.christmas-ui #versionInfo::before {
+    content: "🎅 ";
+}
+body.christmas-ui #versionInfo::after {
+    content: " ❄️";
+}

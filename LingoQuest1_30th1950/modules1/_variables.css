@@ -1,0 +1,47 @@
+
+/*
+ * css/modules/_variables.css
+ * Purpose: Defines global CSS custom properties (variables) for colors, sizing, and fonts.
+ * Usage: Imported by style.css.
+ * Timestamp: 2025-05-29 03:19:15 PM BST
+ * License: MIT License (https://opensource.org/licenses/MIT)
+ * Copyright (c) 2025 AllieBaig (https://alliebaig.github.io/LingoQuest1/)
+ */
+
+:root {
+    /* Color Variables */
+    --primary-color: #4CAF50; /* Green */
+    --secondary-color: #2196F3; /* Blue */
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --border-color: #ddd;
+    --card-background: #fff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --button-active-bg: brightness(0.9); /* Default for active button state */
+    --button-border-radius: 5px; /* Default border radius for buttons */
+
+    /* Base Sizing Variables (Adjust these defaults for overall feel) */
+    --base-font-scale: 1; /* Multiplier for base font size */
+    --base-padding-scale: 1; /* Multiplier for base padding */
+    --base-button-min-height: 48px; /* Minimum height for buttons */
+
+    /* Font Families - Platform-agnostic defaults */
+    --font-family-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+    --line-height-base: 1.5; /* Default line height */
+
+    /* Font Sizes (Using clamp for responsiveness + scaling factor) */
+    --font-size-body: clamp(16px, calc(1rem * var(--base-font-scale) + 0.5vw), 20px);
+    --font-size-h1: clamp(28px, calc(2.2em * var(--base-font-scale) + 1vw), 50px);
+    --font-size-h2: clamp(22px, calc(1.8em * var(--base-font-scale) + 0.5vw), 36px);
+    --font-size-game-clue: clamp(24px, calc(1.5em * var(--base-font-scale) + 0.8vw), 40px);
+    --font-size-mcq-option: clamp(18px, calc(1.1em * var(--base-font-scale) + 0.3vw), 28px);
+    --font-size-footer: clamp(14px, calc(0.9em * var(--base-font-scale)), 18px);
+
+    /* Padding Sizes */
+    --padding-sm: calc(10px * var(--base-padding-scale));
+    --padding-md: calc(15px * var(--base-padding-scale));
+    --padding-lg: calc(20px * var(--base-padding-scale));
+    --padding-xl: calc(25px * var(--base-padding-scale));
+}

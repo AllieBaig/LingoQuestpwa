@@ -1,0 +1,34 @@
+
+/*
+ * css/modules/_header.css
+ * Purpose: Styles for the application header.
+ * Usage: Imported by style.css.
+ * Timestamp: 2025-05-29 03:26:00 PM BST
+ * License: MIT License (https://opensource.org/licenses/MIT)
+ * Copyright (c) 2025 AllieBaig (https://alliebaig.github.io/LingoQuest1/)
+ */
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--padding-lg);
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--padding-sm);
+}
+
+header h1 {
+    margin: 0;
+    font-size: var(--font-size-h1);
+    font-weight: var(--font-weight-bold);
+}
+
+.header-controls {
+    display: flex;
+    gap: var(--padding-sm);
+    flex-wrap: wrap;
+}

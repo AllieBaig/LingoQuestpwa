@@ -1,0 +1,72 @@
+
+/*
+ * css/modules/_game_elements.css
+ * Purpose: Styles for the main game-play elements and areas.
+ * Usage: Imported by style.css.
+ * Timestamp: 2025-05-29 03:29:00 PM BST
+ * License: MIT License (https://opensource.org/licenses/MIT)
+ * Copyright (c) 2025 AllieBaig (https://alliebaig.github.io/LingoQuest1/)
+ */
+
+#gameContainer {
+    display: none; /* Hidden by default, shown by JS */
+    flex-direction: column;
+    gap: var(--padding-lg);
+    align-items: center;
+}
+
+.game-area {
+    width: 100%;
+    max-width: 700px;
+    min-height: 50px;
+    padding: var(--padding-md);
+    border: 1px dashed var(--border-color);
+    border-radius: 5px;
+    text-align: center;
+}
+
+#sentenceClue {
+    font-size: var(--font-size-game-clue);
+    font-weight: var(--font-weight-bold);
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+}
+
+#sentenceBuilderArea {
+    min-height: 100px;
+    background-color: var(--background-color);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--padding-sm);
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--border-color);
+}
+
+#mcqOptions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--padding-sm);
+    padding: var(--padding-md);
+    min-height: 80px;
+}
+
+#resultSummary {
+    min-height: 80px;
+    font-size: var(--font-size-game-clue);
+    font-weight: var(--font-weight-bold);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--padding-sm);
+}
+
+#resultSummary button {
+    margin-top: var(--padding-md);
+    font-size: var(--font-size-body);
+    padding: var(--padding-sm) var(--padding-lg);
+}

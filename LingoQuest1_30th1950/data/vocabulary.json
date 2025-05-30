@@ -1,0 +1,59 @@
+
+[
+  {
+    "id": "q1_en_easy",
+    "clue": "Which animal barks?",
+    "correctAnswer": "Dog",
+    "options": ["Cat", "Dog", "Bird", "Fish"],
+    "language": "en",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q2_en_easy",
+    "clue": "What is the capital of France?",
+    "correctAnswer": "Paris",
+    "options": ["London", "Rome", "Paris", "Berlin"],
+    "language": "en",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q3_en_easy",
+    "clue": "How many fingers does a human have on one hand?",
+    "correctAnswer": "5",
+    "options": ["3", "4", "5", "6"],
+    "language": "en",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q4_en_medium",
+    "clue": "What is the largest planet in our solar system?",
+    "correctAnswer": "Jupiter",
+    "options": ["Mars", "Jupiter", "Saturn", "Earth"],
+    "language": "en",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q5_en_medium",
+    "clue": "Who wrote 'Romeo and Juliet'?",
+    "correctAnswer": "William Shakespeare",
+    "options": ["Jane Austen", "Charles Dickens", "William Shakespeare", "Mark Twain"],
+    "language": "en",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q6_fr_easy",
+    "clue": "Quel est le mot pour 'hello' en français?",
+    "correctAnswer": "Bonjour",
+    "options": ["Au revoir", "Merci", "Bonjour", "Oui"],
+    "language": "fr",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q7_fr_easy",
+    "clue": "Combien de jours y a-t-il dans une semaine?",
+    "correctAnswer": "Sept",
+    "options": ["Cinq", "Six", "Sept", "Huit"],
+    "language": "fr",
+    "difficulty": "easy"
+  }
+]

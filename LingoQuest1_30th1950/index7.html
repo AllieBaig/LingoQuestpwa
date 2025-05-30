@@ -1,0 +1,26 @@
+
+<section id="gameModes" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px;">
+    <h2>Select a Game Mode</h2>
+    <button id="soloModeBtn" data-lang="fr">Solo Mode (French)</button>
+    <button id="mixLingoBtn" data-lang="en">MixLingo (English)</button>
+    <button id="wordRelicBtn">Word Relic</button>
+    <button id="wordSafariBtn">Word Safari</button>
+    <select id="answerLanguageSelector">
+        <option value="en">Answers In: English</option>
+        <option value="fr">Answers In: French</option>
+    </select>
+    <select id="difficultySelector">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+    </select>
+</section>
+
+<section id="gameContainer" style="display: none; flex-direction: column; align-items: center; justify-content: center; padding: 20px;">
+    <h2 id="sentenceClue"></h2>
+    <div id="sentenceBuilderArea" style="margin-top: 10px;"></div>
+    <div id="mcqOptions" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 20px;">
+        </div>
+    <div id="resultSummary" style="margin-top: 20px; text-align: center;">
+        </div>
+    </section>

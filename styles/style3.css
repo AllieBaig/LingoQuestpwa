@@ -1,0 +1,73 @@
+
+/* Existing CSS */
+
+/* --- NEW OS-BASED THEMES --- */
+
+body.android-theme {
+    background-color: #3DDC84; /* Android Green */
+    color: #212121;
+    font-family: 'Roboto', sans-serif;
+    /* Add more Android-specific styles */
+}
+
+body.ios-theme {
+    background-color: #F2F2F7; /* iOS Light Gray */
+    color: #1C1C1E;
+    font-family: 'SF Pro Display', sans-serif;
+    /* Add more iOS-specific styles */
+}
+
+body.windows98-theme {
+    background-color: #008080; /* Teal desktop */
+    color: #C0C0C0; /* Light gray text */
+    font-family: 'MS Sans Serif', 'Arial', sans-serif;
+    /* Simulate Windows 98 UI elements, borders, etc. */
+    border: 3px outset #c0c0c0; /* Example */
+}
+
+body.windowsxp-theme {
+    background-color: #3399FF; /* Bliss wallpaper blue */
+    color: #000000;
+    font-family: 'Segoe UI', 'Tahoma', sans-serif;
+    /* XP-style buttons, gradients, etc. */
+}
+
+body.ubuntu-theme {
+    background-color: #2C001E; /* Ubuntu Dark Purple */
+    color: #F8F8F8;
+    font-family: 'Ubuntu', sans-serif;
+    /* Ubuntu-specific accents */
+}
+
+body.redhat-theme {
+    background-color: #EE0000; /* Red Hat Red */
+    color: #FFFFFF;
+    font-family: 'Liberation Sans', sans-serif;
+    /* Red Hat specific elements */
+}
+
+/* --- FESTIVAL THEMES (if you haven't defined them yet) --- */
+body.christmas-theme {
+    background-color: #B30000; /* Deep Red */
+    color: #F8F8F8;
+    /* Example: Christmas tree, snow, etc. */
+}
+
+body.halloween-theme {
+    background-color: #1A0000; /* Dark, spooky */
+    color: #FFA500; /* Orange text */
+    /* Example: spooky fonts, spiderwebs */
+}
+
+/* ... and so on for all your national day and other festival themes ... */
+
+/* Dark mode for OS themes (example) */
+body.android-theme.dark {
+    background-color: #121212; /* Darker Android */
+    color: #E0E0E0;
+}
+body.windowsxp-theme.dark {
+    background-color: #000080; /* Dark Blue */
+    color: #D3D3D3;
+}
+/* You'll need to define dark mode styles for each new theme if they are different from default dark mode */

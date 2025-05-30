@@ -1,0 +1,86 @@
+
+/*
+ * style.css
+ * Purpose: Main styling for LingoQuestPWA, normal UI mode.
+ * Usage: Linked in index.html.
+ * Timestamp: 2025-05-28
+ * License: MIT License (https://opensource.org/licenses/MIT)
+ */
+
+:root {
+    /* ... existing CSS variables ... */
+}
+
+body.dark {
+    /* ... existing dark mode variables ... */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    /* --- Dynamic Font Scaling for Body Text --- */
+    /*
+     * min-size: 16px (on very small screens)
+     * preferred-size: 1rem + 0.5vw (scales with viewport width)
+     * max-size: 19px (on very large screens)
+     */
+    font-size: clamp(16px, 1rem + 0.5vw, 19px);
+}
+
+body.minimal-ui {
+    /* ... existing minimal-ui styles ... */
+}
+
+header {
+    /* ... existing header styles ... */
+}
+
+header h1 {
+    margin: 0;
+    /* --- Dynamic Font Scaling for H1 --- */
+    /*
+     * min-size: 1.8em (on very small screens, e.g., 28.8px if root is 16px)
+     * preferred-size: 2.2em + 1vw (scales with viewport width)
+     * max-size: 3.5em (on very large screens, e.g., 56px if root is 16px)
+     */
+    font-size: clamp(1.8em, 2.2em + 1vw, 3.5em);
+}
+
+/* ... other existing styles ... */
+
+section h2 {
+    /* --- Dynamic Font Scaling for H2 (e.g., "Select a Game Mode") --- */
+    font-size: clamp(1.3em, 1.8em + 0.5vw, 2.5em);
+}
+
+#sentenceClue {
+    /* ... existing styles ... */
+    /* --- Dynamic Font Scaling for Clue Text --- */
+    font-size: clamp(1.3em, 1.5em + 0.8vw, 2.2em);
+    font-weight: bold;
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+}
+
+/* ... rest of your CSS ... */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    /* Existing media query rules... */
+    /*
+       For font scaling using clamp(), you generally don't need
+       separate font-size rules in media queries unless you want
+       a very specific behavior override. clamp() handles the range automatically.
+    */
+}

@@ -1,0 +1,138 @@
+
+/*
+ * css/modules/_themes.css
+ * Purpose: Contains styles for dark mode, senior-friendly scaling, platform-specific aesthetics, and language-specific hooks.
+ * Usage: Imported by style.css.
+ * Timestamp: 2025-05-29 03:23:44 PM BST
+ * License: MIT License (https://opensource.org/licenses/MIT)
+ * Copyright (c) 2025 AllieBaig (https://alliebaig.github.io/LingoQuest1/)
+ */
+
+/* --- Dark Mode Theme --- */
+body.dark {
+    --primary-color: #66BB6A;
+    --secondary-color: #90CAF9;
+    --background-color: #2c2c2c;
+    --text-color: #f4f4f4;
+    --border-color: #555;
+    --card-background: #3a3a3a;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --button-active-bg: brightness(1.1);
+}
+
+/* --- Senior-Friendly "Big" Theme --- */
+body.senior-big {
+    --base-font-scale: 1.2; /* 20% larger fonts */
+    --base-padding-scale: 1.2; /* 20% larger padding */
+    --base-button-min-height: 55px; /* Taller buttons */
+
+    /* Override max values if desired, or let clamp handle it */
+    --font-size-body: clamp(18px, calc(1rem * var(--base-font-scale) + 0.6vw), 24px);
+    --font-size-h1: clamp(32px, calc(2.5em * var(--base-font-scale) + 1.2vw), 60px);
+    --font-size-h2: clamp(26px, calc(2em * var(--base-font-scale) + 0.7vw), 42px);
+    --font-size-game-clue: clamp(28px, calc(1.8em * var(--base-font-scale) + 1vw), 48px);
+    --font-size-mcq-option: clamp(20px, calc(1.2em * var(--base-font-scale) + 0.4vw), 32px);
+    --font-size-footer: clamp(16px, calc(1em * var(--base-font-scale)), 20px);
+}
+
+/* --- Senior-Friendly "Very Big" Theme --- */
+body.senior-very-big {
+    --base-font-scale: 1.4; /* 40% larger fonts */
+    --base-padding-scale: 1.4; /* 40% larger padding */
+    --base-button-min-height: 65px; /* Even taller buttons */
+
+    /* Override max values further */
+    --font-size-body: clamp(20px, calc(1.1rem * var(--base-font-scale) + 0.7vw), 28px);
+    --font-size-h1: clamp(36px, calc(2.8em * var(--base-font-scale) + 1.5vw), 70px);
+    --font-size-h2: clamp(30px, calc(2.2em * var(--base-font-scale) + 0.8vw), 48px);
+    --font-size-game-clue: clamp(32px, calc(2em * var(--base-font-scale) + 1.2vw), 56px);
+    --font-size-mcq-option: clamp(22px, calc(1.3em * var(--base-font-scale) + 0.5vw), 36px);
+    --font-size-footer: clamp(18px, calc(1.1em * var(--base-font-scale)), 22px);
+}
+
+/* --- Platform-Specific Minimal Styles --- */
+
+/* Android-based Minimal UI */
+body.os-android {
+    /* Font: Roboto is characteristic, or a similar sans-serif. */
+    --font-family-body: 'Roboto', 'Noto Sans', sans-serif;
+    /* Buttons: Slightly more rounded, subtle elevation/shadows */
+    --button-border-radius: 8px;
+    /* Android buttons often have a subtle shadow, but for 'minimal' we can keep it light */
+    /* Input/Selects: Material-like underline or filled appearance - challenging with minimal CSS */
+    /* Focus: Typically uses a distinct highlight color */
+}
+
+body.os-android button,
+body.os-android select {
+    box-shadow: 0 2px 4px var(--shadow-color); /* Subtle elevation */
+    border-radius: var(--button-border-radius);
+}
+
+body.os-android button:active {
+    background-color: var(--button-active-bg);
+    box-shadow: 0 1px 2px var(--shadow-color); /* Pressed effect */
+    transform: translateY(1px);
+}
+
+body.os-android select {
+    border-bottom: 2px solid var(--secondary-color); /* Subtle underline effect */
+    border-radius: 4px 4px 0 0;
+    padding: var(--padding-sm) var(--padding-md);
+}
+
+/* iOS-based Minimal UI */
+body.os-ios {
+    /* Font: San Francisco (system font) or a similar clean sans-serif */
+    --font-family-body: -apple-system, 'Helvetica Neue', 'Segoe UI', sans-serif;
+    --font-weight-normal: 300; /* iOS often uses lighter weights */
+    --font-weight-bold: 600; /* For prominent text */
+    /* Buttons: Less rounded, no strong shadows, more direct visual feedback */
+    --button-border-radius: 10px; /* Slightly more rounded than default but less than Android */
+}
+
+body.os-ios button,
+body.os-ios select {
+    border-radius: var(--button-border-radius);
+    box-shadow: none; /* No strong shadows */
+    border: 1px solid var(--border-color); /* Subtle border, often translucent in actual iOS */
+    background-color: var(--secondary-color); /* iOS buttons are often transparent or white with blue text */
+    color: white; /* Text color for iOS buttons */
+}
+
+body.os-ios button:active {
+    background-color: var(--button-active-bg); /* Darken slightly on press */
+    transform: none; /* No translateY */
+}
+
+body.os-ios select {
+    border: 1px solid var(--border-color); /* Clean, bordered box */
+    border-radius: 5px;
+    background-color: var(--card-background);
+    color: var(--text-color);
+}
+
+/* --- Language-Specific Minimal UI Adjustments --- */
+
+/* For English (default, mostly no changes unless specific font preferred) */
+body.lang-en {
+    /* Example: Ensuring a specific font is used if available and desired for English text */
+    /* --font-family-body: 'Arial', sans-serif; */
+    /* --line-height-base: 1.5; */
+}
+
+/* For French */
+body.lang-fr {
+    /* French text can sometimes be slightly longer than English,
+        so minor line-height or letter-spacing adjustments could improve readability. */
+    --line-height-base: 1.55; /* Slightly more line spacing for French */
+    /* Example: If you wanted a specific font for French */
+    /* --font-family-body: 'Georgia', serif; */
+}
+
+/* For German */
+body.lang-de {
+    /* German words can be significantly longer; increased letter-spacing or line-height might help. */
+    --line-height-base: 1.6; /* A bit more line spacing for German */
+    /* --font-family-body: 'Open Sans', sans-serif; */
+}

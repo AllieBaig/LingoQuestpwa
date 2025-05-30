@@ -1,0 +1,24 @@
+
+
+/*
+ * style.css/
+ * Purpose: Main entry point for LingoQuestPWA styles.
+ * Imports all other CSS modules for better organization.
+ * Usage: Linked in index.html.
+ * Timestamp: 2025-05-29 03:15:43 PM BST
+ * License: MIT License (https://opensource.org/licenses/MIT)
+ * Copyright (c) 2025 AllieBaig (https://alliebaig.github.io/LingoQuest1/)
+ */
+
+/* Import order matters! Variables should come first. */
+@import url('modules/_variables.css');
+@import url('modules/_base.css');
+@import url('modules/_themes.css');
+@import url('modules/_header.css');
+@import url('modules/_layout.css');
+@import url('modules/_components.css');
+@import url('modules/_game_elements.css');
+@import url('modules/_xp_tracker.css');
+@import url('modules/_footer.css');
+@import url('modules/_responsive.css');
+

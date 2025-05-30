@@ -1,0 +1,69 @@
+
+{
+  "en": {
+    "easy": [
+      {
+        "id": "en-easy-1",
+        "clue": "What is the capital of France?",
+        "answer": { "en": "Paris", "fr": "Paris", "de": "Paris" },
+        "options": [
+          { "en": "London", "fr": "Londres", "de": "London" },
+          { "en": "Berlin", "fr": "Berlin", "de": "Berlin" },
+          { "en": "Paris", "fr": "Paris", "de": "Paris" },
+          { "en": "Rome", "fr": "Rome", "de": "Rom" }
+        ],
+        "type": "mcq"
+      },
+      {
+        "id": "en-easy-2",
+        "clue": "The color of the sky is usually...",
+        "answer": { "en": "Blue", "fr": "Bleu", "de": "Blau" },
+        "options": [
+          { "en": "Green", "fr": "Vert", "de": "Grün" },
+          { "en": "Red", "fr": "Rouge", "de": "Rot" },
+          { "en": "Yellow", "fr": "Jaune", "de": "Gelb" },
+          { "en": "Blue", "fr": "Bleu", "de": "Blau" }
+        ],
+        "type": "mcq"
+      }
+    ],
+    "medium": [],
+    "hard": []
+  },
+  "fr": {
+    "easy": [
+      {
+        "id": "fr-easy-1",
+        "clue": "Quelle est la capitale de la France ?",
+        "answer": { "en": "Paris", "fr": "Paris", "de": "Paris" },
+        "options": [
+          { "en": "Londres", "fr": "Londres", "de": "London" },
+          { "en": "Berlin", "fr": "Berlin", "de": "Berlin" },
+          { "en": "Paris", "fr": "Paris", "de": "Paris" },
+          { "en": "Rome", "fr": "Rome", "de": "Rom" }
+        ],
+        "type": "mcq"
+      }
+    ],
+    "medium": [],
+    "hard": []
+  },
+  "de": {
+    "easy": [
+      {
+        "id": "de-easy-1",
+        "clue": "Was ist die Hauptstadt Frankreichs?",
+        "answer": { "en": "Paris", "fr": "Paris", "de": "Paris" },
+        "options": [
+          { "en": "London", "fr": "Londres", "de": "London" },
+          { "en": "Berlin", "fr": "Berlin", "de": "Berlin" },
+          { "en": "Paris", "fr": "Paris", "de": "Paris" },
+          { "en": "Rom", "fr": "Rome", "de": "Rom" }
+        ],
+        "type": "mcq"
+      }
+    ],
+    "medium": [],
+    "hard": []
+  }
+}

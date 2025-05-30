@@ -1,0 +1,36 @@
+/*
+ * theme-windowsxp-senior.css
+ * Senior-friendly Windows XP theme
+ * https://alliebaig.github.io/LingoQuest1/css/theme-windowsxp-senior.css
+ */
+
+body.windowsxp-senior-theme {
+    background: linear-gradient(to bottom, #cfdde8, #b0c4de);
+    color: #000;
+    font-family: Tahoma, sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    padding: 10px;
+}
+
+body.windowsxp-senior-theme h1 {
+    font-size: 2rem;
+    margin-bottom: 1em;
+}
+
+body.windowsxp-senior-theme button,
+body.windowsxp-senior-theme select {
+    font-size: 1.2rem;
+    padding: 12px 18px;
+    border: 2px outset #ccc;
+    background-color: #f0f0f0;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+body.windowsxp-senior-theme .game-area {
+    background-color: #fff;
+    border: 1px solid #aaa;
+    padding: 12px;
+    font-size: 1.25rem;
+}

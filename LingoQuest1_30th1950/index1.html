@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LingoQuestPWA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ascii.css" disabled>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2196F3"/>
+</head>
+<body class="minimal-ui">
+    <header>
+        <h1>LingoQuest</h1>
+        <div class="header-controls">
+            <select id="uiModeSelector">
+                <option value="normal">Normal UI</option>
+                <option value="ascii">ASCII UI</option>
+            </select>
+            <button id="darkModeToggle">Toggle Dark Mode</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="gameModes">
+            <h2>Select a Game Mode</h2>
+            <div class="mode-buttons">
+                <button id="soloModeBtn" data-mode="solo" data-lang="fr">Solo Mode (French)</button>
+                <button id="mixLingoBtn" data-mode="mixlingo" data-lang="en">MixLingo (English)</button>
+                <button id="wordRelicBtn" data-mode="wordrelic">Word Relic</button>
+                <button id="wordSafariBtn" data-mode="wordsafari">Word Safari</button>
+            </div>
+        </section>
+
+        <section id="gameContainer">
+            <div id="xpTracker">
+                <div class="xp-bar">
+                    <div class="xp-fill" style="width: 0%;"></div>
+                </div>
+                <span class="xp-text">XP: 0</span>
+                <span class="streak-badge">Streak: 0</span>
+            </div>
+            <div id="sentenceClue" class="game-area"></div>
+            <div id="sentenceBuilderArea" class="game-area"></div>
+            <div id="mcqOptions" class="game-area"></div>
+            <div id="resultSummary" class="game-area"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 LingoQuestPWA</p>
+        <div id="versionInfo"></div>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+
+/*
+ * css/modules/_base.css
+ * Purpose: Contains base body styles and minimal UI settings.
+ * Usage: Imported by style.css.
+ * Timestamp: 2025-05-29 03:21:40 PM BST
+ * License: MIT License (https://opensource.org/licenses/MIT)
+ * Copyright (c) 2025 AllieBaig (https://alliebaig.github.io/LingoQuest1/)
+ */
+
+/* --- General Body and Layout (using variables) --- */
+body {
+    font-family: var(--font-family-body); /* Use the new variable */
+    font-weight: var(--font-weight-normal); /* Use new variable */
+    line-height: var(--line-height-base); /* Use new variable */
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: var(--font-size-body);
+}
+
+body.minimal-ui {
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 0 15px var(--shadow-color);
+    min-height: 100vh;
+    padding: var(--padding-lg);
+}

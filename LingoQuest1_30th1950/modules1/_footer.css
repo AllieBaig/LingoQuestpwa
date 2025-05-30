@@ -1,0 +1,29 @@
+
+/*
+ * css/modules/_footer.css
+ * Purpose: Styles for the application footer.
+ * Usage: Imported by style.css.
+ * Timestamp: 2025-05-29 03:31:00 PM BST
+ * License: MIT License (https://opensource.org/licenses/MIT)
+ * Copyright (c) 2025 AllieBaig (https://alliebaig.github.io/LingoQuest1/)
+ */
+
+footer {
+    margin-top: auto;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: var(--padding-md);
+    border-radius: 0 0 8px 8px;
+    font-size: var(--font-size-footer);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--padding-sm);
+}
+
+#versionInfo {
+    font-size: var(--font-size-footer);
+    opacity: 0.8;
+}

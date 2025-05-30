@@ -1,0 +1,65 @@
+
+{
+  "questions": [
+    {
+      "id": "mixlingo-1",
+      "clue": "The capital of France is ____ (French: Paris).",
+      "options": ["London", "Berlin", "Madrid", "Paris"],
+      "correctAnswer": "Paris"
+    },
+    {
+      "id": "mixlingo-2",
+      "clue": "Please pass the ____ (Spanish: sal).",
+      "options": ["pepper", "sugar", "salt", "vinegar"],
+      "correctAnswer": "salt"
+    },
+    {
+       "id": "mixlingo-3",
+       "clue": "I would like a glass of ____ (Italian: acqua).",
+       "options": ["juice", "milk", "water", "soda"],
+       "correctAnswer": "water"
+    },
+    {
+       "id": "mixlingo-4",
+       "clue": "The weather is very ____ today (German: kalt).",
+       "options": ["hot", "cold", "warm", "nice"],
+       "correctAnswer": "cold"
+    },
+    {
+       "id": "mixlingo-5",
+       "clue": "Thank you very ____ (French: beaucoup).",
+       "options": ["much", "little", "well", "badly"],
+       "correctAnswer": "much"
+    },
+    {
+       "id": "mixlingo-6",
+        "clue": "I need to buy some ____ (Spanish: libros).",
+        "options": ["pens", "books", "pencils", "papers"],
+        "correctAnswer": "books"
+     },
+     {
+        "id": "mixlingo-7",
+        "clue": "He is my ____ (Italian: amico).",
+        "options": ["enemy", "friend", "brother", "sister"],
+        "correctAnswer": "friend"
+     },
+     {
+        "id": "mixlingo-8",
+        "clue": "The house is very ____ (German: groß).",
+        "options": ["small", "big", "old", "new"],
+        "correctAnswer": "big"
+     },
+     {
+        "id": "mixlingo-9",
+        "clue": "Do you want some ____ (French: thé)?",
+        "options": ["coffee", "tea", "juice", "water"],
+        "correctAnswer": "tea"
+     },
+     {
+        "id": "mixlingo-10",
+        "clue": "I like to listen to ____ (Spanish: música).",
+        "options": ["sports", "music", "news", "stories"],
+        "correctAnswer": "music"
+     }
+  ]
+}

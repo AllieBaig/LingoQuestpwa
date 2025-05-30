@@ -1,0 +1,122 @@
+
+/*
+ * ascii.css/
+ * Purpose: ASCII UI specific styling for LingoQuestPWA - Pure Black & White Terminal Theme.
+ * Usage: Loaded dynamically when ASCII mode (pure) is active.
+ * Timestamp: 2025-05-30
+ * License: MIT License (https://opensource.org/licenses/MIT)
+ */
+
+body.ascii-ui.pure {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #000;
+    color: #FFF;
+    text-shadow: none;
+    border: 2px dashed #FFF;
+}
+
+body.ascii-ui.pure header,
+body.ascii-ui.pure footer,
+body.ascii-ui.pure section,
+body.ascii-ui.pure select,
+body.ascii-ui.pure button,
+body.ascii-ui.pure .game-area,
+body.ascii-ui.pure .xp-bar,
+body.ascii-ui.pure .xp-fill,
+body.ascii-ui.pure .mcq-option {
+    background-color: #000 !important;
+    color: #FFF !important;
+    border: 1px solid #FFF !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    text-align: left;
+    padding: 8px;
+}
+
+body.ascii-ui.pure header h1 {
+    text-align: center;
+    width: 100%;
+}
+
+body.ascii-ui.pure select,
+body.ascii-ui.pure button {
+    text-transform: uppercase;
+}
+
+body.ascii-ui.pure .xp-bar {
+    border: 1px solid #FFF;
+    height: 12px;
+    margin: 5px 0;
+}
+
+body.ascii-ui.pure .xp-fill {
+    background-color: #FFF !important;
+    height: 100%;
+}
+
+body.ascii-ui.pure .xp-text,
+body.ascii-ui.pure .streak-badge {
+    text-transform: uppercase;
+}
+
+body.ascii-ui.pure .mode-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+body.ascii-ui.pure .mode-buttons button {
+    width: 100%;
+    text-align: left;
+}
+
+body.ascii-ui.pure #sentenceClue,
+body.ascii-ui.pure #sentenceBuilderArea,
+body.ascii-ui.pure #resultSummary {
+    text-align: left;
+    padding: 10px;
+    min-height: auto;
+}
+
+body.ascii-ui.pure #mcqOptions {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+body.ascii-ui.pure .mcq-option {
+    width: 100%;
+    cursor: pointer;
+}
+
+body.ascii-ui.pure .mcq-option.correct {
+    background-color: #222 !important;
+    color: #FFF !important;
+    font-weight: bold;
+    border-left: 3px solid #FFF;
+}
+
+body.ascii-ui.pure .mcq-option.incorrect {
+    background-color: #000 !important;
+    color: #888 !important;
+    font-style: italic;
+    border-left: 3px dashed #FFF;
+}
+
+body.ascii-ui.pure footer {
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+body.ascii-ui.pure #versionInfo {
+    text-align: center;
+}
+
+/* Specific overrides for mobile-friendliness in pure ASCII */
+@media (max-width: 768px) {
+    body.ascii-ui.pure.minimal-ui {
+        padding: 5px;
+        margin: 0;
+    }
+}

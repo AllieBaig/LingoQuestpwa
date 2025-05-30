@@ -1,0 +1,60 @@
+
+/*
+ * css/modules/_components.css
+ * Purpose: Styles for reusable UI components like buttons and select elements.
+ * Usage: Imported by style.css.
+ * Timestamp: 2025-05-29 03:28:15 PM BST
+ * License: MIT License (https://opensource.org/licenses/MIT)
+ * Copyright (c) 2025 AllieBaig (https://alliebaig.github.io/LingoQuest1/)
+ */
+
+select, button {
+    padding: var(--padding-sm) var(--padding-md);
+    border: none;
+    border-radius: var(--button-border-radius); /* Use variable */
+    cursor: pointer;
+    font-size: var(--font-size-body);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    background-color: var(--secondary-color);
+    color: white;
+    min-height: var(--base-button-min-height);
+}
+
+select {
+    background-color: var(--card-background);
+    color: var(--text-color);
+    border: 1px solid var(--border-color); /* Default select border */
+}
+
+button:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+}
+
+.mcq-option {
+    padding: var(--padding-md);
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: var(--button-border-radius); /* Use variable */
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+    font-size: var(--font-size-mcq-option);
+    min-height: var(--base-button-min-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mcq-option:hover {
+    filter: brightness(1.15);
+}
+
+.mcq-option.correct {
+    background-color: var(--primary-color);
+}
+
+.mcq-option.incorrect {
+    background-color: #E57373; /* Red for incorrect */
+}

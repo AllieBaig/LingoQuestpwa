@@ -1,0 +1,31 @@
+
+[
+  {
+    "id": "wr001",
+    "word": "Ephemeral",
+    "definition": "Lasting for a very short time.",
+    "category": "Vocabulary",
+    "difficulty": "Hard"
+  },
+  {
+    "id": "wr002",
+    "word": "Serendipity",
+    "definition": "The occurrence and development of events by chance in a happy or beneficial way.",
+    "category": "Vocabulary",
+    "difficulty": "Medium"
+  },
+  {
+    "id": "wr003",
+    "word": "Mellifluous",
+    "definition": "Sweet or musical; pleasant to hear.",
+    "category": "Vocabulary",
+    "difficulty": "Medium"
+  },
+  {
+    "id": "wr004",
+    "word": "Ubiquitous",
+    "definition": "Present, appearing, or found everywhere.",
+    "category": "Vocabulary",
+    "difficulty": "Hard"
+  }
+]

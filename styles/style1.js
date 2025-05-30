@@ -1,0 +1,456 @@
+
+
+/*
+ * style.css
+ * Purpose: Main styling for LingoQuestPWA, normal UI mode, with senior-friendly scaling, platform-specific minimal aesthetics, and language-specific hooks.
+ * Usage: Linked in index.html.
+ * Timestamp: 2025-05-29 09:39 AM BST
+ * License: MIT Licensee (https://opensource.org/licenses/MIT)
+ * Copyright (c) 2025 AllieBaig (https://alliebaig.github.io/LingoQuest1/)
+ */
+
+:root {
+    /* Color Variables */
+    --primary-color: #4CAF50; /* Green */
+    --secondary-color: #2196F3; /* Blue */
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --border-color: #ddd;
+    --card-background: #fff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --button-active-bg: brightness(0.9); /* Default for active button state */
+    --button-border-radius: 5px; /* Default border radius for buttons */
+
+    /* Base Sizing Variables (Adjust these defaults for overall feel) */
+    --base-font-scale: 1; /* Multiplier for base font size */
+    --base-padding-scale: 1; /* Multiplier for base padding */
+    --base-button-min-height: 48px; /* Minimum height for buttons */
+
+    /* Font Families - Platform-agnostic defaults */
+    --font-family-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+    --line-height-base: 1.5; /* Default line height */
+
+    /* Font Sizes (Using clamp for responsiveness + scaling factor) */
+    --font-size-body: clamp(16px, calc(1rem * var(--base-font-scale) + 0.5vw), 20px);
+    --font-size-h1: clamp(28px, calc(2.2em * var(--base-font-scale) + 1vw), 50px);
+    --font-size-h2: clamp(22px, calc(1.8em * var(--base-font-scale) + 0.5vw), 36px);
+    --font-size-game-clue: clamp(24px, calc(1.5em * var(--base-font-scale) + 0.8vw), 40px);
+    --font-size-mcq-option: clamp(18px, calc(1.1em * var(--base-font-scale) + 0.3vw), 28px);
+    --font-size-footer: clamp(14px, calc(0.9em * var(--base-font-scale)), 18px);
+
+    /* Padding Sizes */
+    --padding-sm: calc(10px * var(--base-padding-scale));
+    --padding-md: calc(15px * var(--base-padding-scale));
+    --padding-lg: calc(20px * var(--base-padding-scale));
+    --padding-xl: calc(25px * var(--base-padding-scale));
+}
+
+/* --- Dark Mode Theme --- */
+body.dark {
+    --primary-color: #66BB6A;
+    --secondary-color: #90CAF9;
+    --background-color: #2c2c2c;
+    --text-color: #f4f4f4;
+    --border-color: #555;
+    --card-background: #3a3a3a;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --button-active-bg: brightness(1.1);
+}
+
+/* --- Senior-Friendly "Big" Theme --- */
+body.senior-big {
+    --base-font-scale: 1.2; /* 20% larger fonts */
+    --base-padding-scale: 1.2; /* 20% larger padding */
+    --base-button-min-height: 55px; /* Taller buttons */
+
+    /* Override max values if desired, or let clamp handle it */
+    --font-size-body: clamp(18px, calc(1rem * var(--base-font-scale) + 0.6vw), 24px);
+    --font-size-h1: clamp(32px, calc(2.5em * var(--base-font-scale) + 1.2vw), 60px);
+    --font-size-h2: clamp(26px, calc(2em * var(--base-font-scale) + 0.7vw), 42px);
+    --font-size-game-clue: clamp(28px, calc(1.8em * var(--base-font-scale) + 1vw), 48px);
+    --font-size-mcq-option: clamp(20px, calc(1.2em * var(--base-font-scale) + 0.4vw), 32px);
+    --font-size-footer: clamp(16px, calc(1em * var(--base-font-scale)), 20px);
+}
+
+/* --- Senior-Friendly "Very Big" Theme --- */
+body.senior-very-big {
+    --base-font-scale: 1.4; /* 40% larger fonts */
+    --base-padding-scale: 1.4; /* 40% larger padding */
+    --base-button-min-height: 65px; /* Even taller buttons */
+
+    /* Override max values further */
+    --font-size-body: clamp(20px, calc(1.1rem * var(--base-font-scale) + 0.7vw), 28px);
+    --font-size-h1: clamp(36px, calc(2.8em * var(--base-font-scale) + 1.5vw), 70px);
+    --font-size-h2: clamp(30px, calc(2.2em * var(--base-font-scale) + 0.8vw), 48px);
+    --font-size-game-clue: clamp(32px, calc(2em * var(--base-font-scale) + 1.2vw), 56px);
+    --font-size-mcq-option: clamp(22px, calc(1.3em * var(--base-font-scale) + 0.5vw), 36px);
+    --font-size-footer: clamp(18px, calc(1.1em * var(--base-font-scale)), 22px);
+}
+
+/* --- Platform-Specific Minimal Styles --- */
+
+/* Android-based Minimal UI */
+body.os-android {
+    /* Font: Roboto is characteristic, or a similar sans-serif. */
+    --font-family-body: 'Roboto', 'Noto Sans', sans-serif;
+    /* Buttons: Slightly more rounded, subtle elevation/shadows */
+    --button-border-radius: 8px;
+    /* Android buttons often have a subtle shadow, but for 'minimal' we can keep it light */
+    /* Input/Selects: Material-like underline or filled appearance - challenging with minimal CSS */
+    /* Focus: Typically uses a distinct highlight color */
+}
+
+body.os-android button,
+body.os-android select {
+    box-shadow: 0 2px 4px var(--shadow-color); /* Subtle elevation */
+    border-radius: var(--button-border-radius);
+}
+
+body.os-android button:active {
+    background-color: var(--button-active-bg);
+    box-shadow: 0 1px 2px var(--shadow-color); /* Pressed effect */
+    transform: translateY(1px);
+}
+
+body.os-android select {
+    border-bottom: 2px solid var(--secondary-color); /* Subtle underline effect */
+    border-radius: 4px 4px 0 0;
+    padding: var(--padding-sm) var(--padding-md);
+}
+
+/* iOS-based Minimal UI */
+body.os-ios {
+    /* Font: San Francisco (system font) or a similar clean sans-serif */
+    --font-family-body: -apple-system, 'Helvetica Neue', 'Segoe UI', sans-serif;
+    --font-weight-normal: 300; /* iOS often uses lighter weights */
+    --font-weight-bold: 600; /* For prominent text */
+    /* Buttons: Less rounded, no strong shadows, more direct visual feedback */
+    --button-border-radius: 10px; /* Slightly more rounded than default but less than Android */
+}
+
+body.os-ios button,
+body.os-ios select {
+    border-radius: var(--button-border-radius);
+    box-shadow: none; /* No strong shadows */
+    border: 1px solid var(--border-color); /* Subtle border, often translucent in actual iOS */
+    background-color: var(--secondary-color); /* iOS buttons are often transparent or white with blue text */
+    color: white; /* Text color for iOS buttons */
+}
+
+body.os-ios button:active {
+    background-color: var(--button-active-bg); /* Darken slightly on press */
+    transform: none; /* No translateY */
+}
+
+body.os-ios select {
+    border: 1px solid var(--border-color); /* Clean, bordered box */
+    border-radius: 5px;
+    background-color: var(--card-background);
+    color: var(--text-color);
+}
+
+/* --- Language-Specific Minimal UI Adjustments --- */
+
+/* For English (default, mostly no changes unless specific font preferred) */
+body.lang-en {
+    /* Example: Ensuring a specific font is used if available and desired for English text */
+    /* --font-family-body: 'Arial', sans-serif; */
+    /* --line-height-base: 1.5; */
+}
+
+/* For French */
+body.lang-fr {
+    /* French text can sometimes be slightly longer than English,
+       so minor line-height or letter-spacing adjustments could improve readability. */
+    --line-height-base: 1.55; /* Slightly more line spacing for French */
+    /* Example: If you wanted a specific font for French */
+    /* --font-family-body: 'Georgia', serif; */
+}
+
+/* For German */
+body.lang-de {
+    /* German words can be significantly longer; increased letter-spacing or line-height might help. */
+    --line-height-base: 1.6; /* A bit more line spacing for German */
+    /* --font-family-body: 'Open Sans', sans-serif; */
+}
+
+
+/* --- General Body and Layout (using variables) --- */
+body {
+    font-family: var(--font-family-body); /* Use the new variable */
+    font-weight: var(--font-weight-normal); /* Use new variable */
+    line-height: var(--line-height-base); /* Use new variable */
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: var(--font-size-body);
+}
+
+body.minimal-ui {
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 0 15px var(--shadow-color);
+    min-height: 100vh;
+    padding: var(--padding-lg);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--padding-lg);
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--padding-sm);
+}
+
+header h1 {
+    margin: 0;
+    font-size: var(--font-size-h1);
+    font-weight: var(--font-weight-bold);
+}
+
+.header-controls {
+    display: flex;
+    gap: var(--padding-sm);
+    flex-wrap: wrap;
+}
+
+select, button {
+    padding: var(--padding-sm) var(--padding-md);
+    border: none;
+    border-radius: var(--button-border-radius); /* Use variable */
+    cursor: pointer;
+    font-size: var(--font-size-body);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    background-color: var(--secondary-color);
+    color: white;
+    min-height: var(--base-button-min-height);
+}
+
+select {
+    background-color: var(--card-background);
+    color: var(--text-color);
+    border: 1px solid var(--border-color); /* Default select border */
+}
+
+button:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+}
+
+main {
+    flex-grow: 1;
+    padding: var(--padding-lg) 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-lg);
+}
+
+section {
+    background-color: var(--card-background);
+    padding: var(--padding-xl);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    border: 1px solid var(--border-color);
+}
+
+#gameModes {
+    text-align: center;
+}
+
+.mode-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--padding-md);
+    margin-top: var(--padding-lg);
+}
+
+.mode-buttons button {
+    background-color: var(--primary-color);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-mcq-option);
+}
+
+#gameContainer {
+    display: none;
+    flex-direction: column;
+    gap: var(--padding-lg);
+    align-items: center;
+}
+
+.game-area {
+    width: 100%;
+    max-width: 700px;
+    min-height: 50px;
+    padding: var(--padding-md);
+    border: 1px dashed var(--border-color);
+    border-radius: 5px;
+    text-align: center;
+}
+
+#xpTracker {
+    display: flex;
+    align-items: center;
+    gap: var(--padding-md);
+    margin-bottom: var(--padding-lg);
+    padding: var(--padding-sm) var(--padding-md);
+    background-color: var(--card-background);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.xp-bar {
+    flex-grow: 1;
+    height: 15px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+body.dark .xp-bar {
+    background-color: #555;
+}
+
+.xp-fill {
+    height: 100%;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    transition: width 0.5s ease-out;
+}
+
+.xp-text, .streak-badge {
+    font-weight: var(--font-weight-bold);
+    color: var(--text-color);
+    font-size: var(--font-size-body);
+}
+
+#sentenceClue {
+    font-size: var(--font-size-game-clue);
+    font-weight: var(--font-weight-bold);
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+}
+
+#sentenceBuilderArea {
+    min-height: 100px;
+    background-color: var(--background-color);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--padding-sm);
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--border-color);
+}
+
+#mcqOptions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--padding-sm);
+    padding: var(--padding-md);
+    min-height: 80px;
+}
+
+.mcq-option {
+    padding: var(--padding-md);
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: var(--button-border-radius); /* Use variable */
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+    font-size: var(--font-size-mcq-option);
+    min-height: var(--base-button-min-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mcq-option:hover {
+    filter: brightness(1.15);
+}
+
+.mcq-option.correct {
+    background-color: var(--primary-color);
+}
+
+.mcq-option.incorrect {
+    background-color: #E57373; /* Red for incorrect */
+}
+
+#resultSummary {
+    min-height: 80px;
+    font-size: var(--font-size-game-clue);
+    font-weight: var(--font-weight-bold);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--padding-sm);
+}
+
+#resultSummary button {
+    margin-top: var(--padding-md);
+    font-size: var(--font-size-body);
+    padding: var(--padding-sm) var(--padding-lg);
+}
+
+
+footer {
+    margin-top: auto;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: var(--padding-md);
+    border-radius: 0 0 8px 8px;
+    font-size: var(--font-size-footer);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--padding-sm);
+}
+
+#versionInfo {
+    font-size: var(--font-size-footer);
+    opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .header-controls {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .mode-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    body.minimal-ui {
+        padding: var(--padding-sm);
+    }
+
+    section {
+        padding: var(--padding-md);
+    }
+}

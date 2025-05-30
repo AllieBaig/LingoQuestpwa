@@ -1,0 +1,43 @@
+
+[
+  {
+    "id": "ws001",
+    "word": "Borealis",
+    "definition": "Relating to the north or the northern regions.",
+    "exampleSentence": "The Aurora Borealis is a stunning natural light display.",
+    "category": "Nature",
+    "level": "Intermediate"
+  },
+  {
+    "id": "ws002",
+    "word": "Canyon",
+    "definition": "A deep gorge, typically one with a river flowing through it, as found in North America.",
+    "exampleSentence": "We hiked to the bottom of the grand canyon.",
+    "category": "Geography",
+    "level": "Beginner"
+  },
+  {
+    "id": "ws003",
+    "word": "Kaleidoscope",
+    "definition": "A constantly changing pattern or sequence of elements.",
+    "exampleSentence": "The garden was a kaleidoscope of colors in spring.",
+    "category": "Abstract",
+    "level": "Advanced"
+  },
+  {
+    "id": "ws004",
+    "word": "Quasar",
+    "definition": "A massive and extremely remote celestial object emitting exceptionally large amounts of energy.",
+    "exampleSentence": "Astronomers discovered a new quasar millions of light-years away.",
+    "category": "Science",
+    "level": "Advanced"
+  },
+  {
+    "id": "ws005",
+    "word": "Resplendent",
+    "definition": "Attractively brilliant and impressive in appearance.",
+    "exampleSentence": "The queen looked resplendent in her jeweled gown.",
+    "category": "Descriptive",
+    "level": "Intermediate"
+  }
+]

@@ -1,0 +1,151 @@
+
+
+/*
+ * ascii.css/
+ * Purpose: ASCII UI specific styling for LingoQuestPWA - Christmas Theme.
+ * Usage: Loaded dynamically when ASCII mode with Christmas theme is active.
+ * Timestamp: 2025-05-30
+ * License: MIT License (https://opensource.org/licenses/MIT)
+ */
+
+body.ascii-ui.christmas {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #000;
+    color: #FFF;
+    text-shadow: 0 0 4px #0F0;
+    border: 2px dashed #F00;
+}
+
+body.ascii-ui.christmas header,
+body.ascii-ui.christmas footer,
+body.ascii-ui.christmas section,
+body.ascii-ui.christmas select,
+body.ascii-ui.christmas button,
+body.ascii-ui.christmas .game-area,
+body.ascii-ui.christmas .xp-bar,
+body.ascii-ui.christmas .xp-fill,
+body.ascii-ui.christmas .mcq-option {
+    background-color: #000 !important;
+    color: #FFF !important;
+    border: 1px solid #0F0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    text-align: left;
+    padding: 8px;
+}
+
+body.ascii-ui.christmas header h1 {
+    text-align: center;
+    width: 100%;
+    color: #F00;
+}
+
+body.ascii-ui.christmas select,
+body.ascii-ui.christmas button {
+    text-transform: uppercase;
+    border-color: #F00 !important;
+    color: #0F0 !important;
+}
+
+body.ascii-ui.christmas .xp-bar {
+    border: 1px solid #0F0;
+    height: 12px;
+    margin: 5px 0;
+    background-color: #111;
+}
+
+body.ascii-ui.christmas .xp-fill {
+    background: linear-gradient(90deg, #0F0, #F00);
+    height: 100%;
+}
+
+body.ascii-ui.christmas .xp-text,
+body.ascii-ui.christmas .streak-badge {
+    text-transform: uppercase;
+    color: #FFF;
+}
+
+body.ascii-ui.christmas .mode-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+body.ascii-ui.christmas .mode-buttons button {
+    width: 100%;
+    text-align: left;
+    background-color: #100;
+    color: #FFF;
+    border-left: 3px solid #F00;
+}
+
+body.ascii-ui.christmas #sentenceClue,
+body.ascii-ui.christmas #sentenceBuilderArea,
+body.ascii-ui.christmas #resultSummary {
+    text-align: left;
+    padding: 10px;
+    min-height: auto;
+}
+
+body.ascii-ui.christmas #mcqOptions {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+body.ascii-ui.christmas .mcq-option {
+    width: 100%;
+    cursor: pointer;
+    border-left: 3px solid #FFF;
+    background-color: #000;
+    color: #FFF;
+}
+
+body.ascii-ui.christmas .mcq-option.correct {
+    background-color: #050 !important;
+    color: #0F0 !important;
+    font-weight: bold;
+    border-left: 3px solid #0F0;
+}
+
+body.ascii-ui.christmas .mcq-option.incorrect {
+    background-color: #500 !important;
+    color: #F00 !important;
+    font-style: italic;
+    border-left: 3px solid #F00;
+}
+
+body.ascii-ui.christmas footer {
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    border-top: 1px dashed #F00;
+}
+
+body.ascii-ui.christmas #versionInfo {
+    text-align: center;
+    color: #FFF;
+}
+
+/* Snowy ASCII effect */
+body.ascii-ui.christmas::before {
+    content: "❄ ❄ ❄ ASCII Christmas Mode ❄ ❄ ❄";
+    display: block;
+    text-align: center;
+    color: #FFF;
+    margin-top: 5px;
+    font-style: italic;
+    animation: blink 2s step-start infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0.6; }
+}
+
+/* Mobile override */
+@media (max-width: 768px) {
+    body.ascii-ui.christmas.minimal-ui {
+        padding: 5px;
+        margin: 0;
+    }
+}

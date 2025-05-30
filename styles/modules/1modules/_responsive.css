@@ -1,0 +1,33 @@
+
+/*
+ * css/modules/_responsive.css
+ * Purpose: Contains media queries for responsive design adjustments.
+ * Usage: Imported by style.css.
+ * Timestamp: 2025-05-29 03:32:00 PM BST
+ * License: MIT License (https://opensource.org/licenses/MIT)
+ * Copyright (c) 2025 AllieBaig (https://alliebaig.github.io/LingoQuest1/)
+ */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .header-controls {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .mode-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    body.minimal-ui {
+        padding: var(--padding-sm);
+    }
+
+    section {
+        padding: var(--padding-md);
+    }
+}

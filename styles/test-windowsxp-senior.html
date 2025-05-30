@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Windows XP Senior Theme Test</title>
+    <link rel="stylesheet" href="css/theme-windowsxp-senior.css" disabled id="theme-windowsxp-senior">
+</head>
+<body>
+    <h1>Theme Test</h1>
+    <select id="themeSelector">
+        <option value="default">Default</option>
+        <option value="windowsxp-senior">Windows XP (Senior)</option>
+    </select>
+
+    <div class="game-area">This is a test area. It should appear with large font when theme is applied.</div>
+
+    <button>Test Button</button>
+
+    <script>
+        document.getElementById('themeSelector').addEventListener('change', (e) => {
+            const selected = e.target.value;
+
+            // Reset
+            document.getElementById('theme-windowsxp-senior')?.setAttribute('disabled', true);
+            document.body.classList.remove('windowsxp-senior-theme');
+
+            // Apply if selected
+            if (selected === 'windowsxp-senior') {
+                console.log('🎯 Applying Windows XP Senior Theme');
+                document.getElementById('theme-windowsxp-senior')?.removeAttribute('disabled');
+                document.body.classList.add('windowsxp-senior-theme');
+            } else {
+                console.log('🔄 Reset to default');
+            }
+        });
+    </script>
+</body>
+</html>

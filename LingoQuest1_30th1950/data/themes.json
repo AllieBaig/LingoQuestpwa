@@ -1,0 +1,89 @@
+
+// data/themes.json
+[
+    {
+        "id": "default",
+        "name": "Default Theme",
+        "type": "base",
+        "styles": {
+            "--primary-color": "#4CAF50",
+            "--secondary-color": "#2196F3",
+            "--background-color": "#f4f4f4",
+            "--text-color": "#333",
+            "--card-background": "#fff"
+        }
+    },
+    {
+        "id": "dark",
+        "name": "Dark Mode",
+        "type": "mode",
+        "styles": {
+            "--primary-color": "#66BB6A",
+            "--secondary-color": "#90CAF9",
+            "--background-color": "#2c2c2c",
+            "--text-color": "#f4f4f4",
+            "--card-background": "#3a3a3a"
+        }
+    },
+    {
+        "id": "diwali",
+        "name": "Diwali Festival",
+        "type": "festival",
+        "culture": "Indian",
+        "appliesOn": { "month": 10, "dayRange": [25, 30] },
+        "styles": {
+            "--primary-color": "#FF8C00",   /* Deep Orange */
+            "--secondary-color": "#FFD700",  /* Gold */
+            "--background-color": "#FFF8DC", /* Cornsilk */
+            "--text-color": "#4B0082",       /* Indigo */
+            "--card-background": "#FFFFF0",  /* Ivory */
+            "--shadow-color": "rgba(255, 140, 0, 0.3)",
+            "--button-border-radius": "15px" /* Softer buttons */
+        }
+    },
+    {
+        "id": "halloween",
+        "name": "Halloween",
+        "type": "festival",
+        "culture": "Western",
+        "appliesOn": { "month": 9, "day": 31 },
+        "styles": {
+            "--primary-color": "#FF4500",   /* OrangeRed */
+            "--secondary-color": "#4B0082", /* Indigo */
+            "--background-color": "#2F4F4F", /* DarkSlateGray */
+            "--text-color": "#F0F8FF",       /* AliceBlue */
+            "--card-background": "#696969",  /* DimGray */
+            "--shadow-color": "rgba(0, 0, 0, 0.5)"
+        }
+    },
+    {
+        "id": "bastille_day",
+        "name": "Bastille Day",
+        "type": "national_day",
+        "country": "France",
+        "appliesOn": { "month": 6, "day": 14 },
+        "styles": {
+            "--primary-color": "#002395", /* Dark Blue (French Flag) */
+            "--secondary-color": "#ED2939", /* Red (French Flag) */
+            "--background-color": "#F6F6F6", /* Light Gray */
+            "--text-color": "#333333",
+            "--card-background": "#FFFFFF",
+            "--border-color": "#BBBBBB"
+        }
+    },
+    {
+        "id": "independence_us",
+        "name": "US Independence Day",
+        "type": "national_day",
+        "country": "USA",
+        "appliesOn": { "month": 6, "day": 4 },
+        "styles": {
+            "--primary-color": "#BF0A30", /* Red */
+            "--secondary-color": "#002868", /* Blue */
+            "--background-color": "#F0F0F0",
+            "--text-color": "#333333",
+            "--card-background": "#FFFFFF",
+            "--border-color": "#DDDDDD"
+        }
+    }
+]
