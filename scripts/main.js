@@ -28,10 +28,10 @@ if (!mode) {
   updateXPDisplay();
   initGameSwitchListener();
   attachBackToMenuListener();
-  initButtonSizeToggle();
-  
-  
-// 🔁 Apply button size globally using body class
+  initButtonSizeToggle();  // ✅ call here
+}
+
+// ✅ Moved outside of block
 function applyButtonSize(size) {
   const validSizes = ['md', 'lg', 'xl', 'xxl'];
   document.body.classList.remove(...validSizes.map(s => `btn-${s}`));
@@ -40,8 +40,24 @@ function applyButtonSize(size) {
   }
 }
 
-  
+// ✅ Newly added helper
+function initButtonSizeToggle() {
+  const sizeSelector = document.getElementById('buttonSizeToggle');
 
+  if (sizeSelector) {
+    const savedSize = localStorage.getItem('btnSizePref');
+    if (savedSize) {
+      sizeSelector.value = savedSize;
+      applyButtonSize(savedSize);
+    }
+
+    sizeSelector.addEventListener('change', (e) => {
+      const newSize = e.target.value;
+      applyButtonSize(newSize);
+      localStorage.setItem('btnSizePref', newSize);
+    });
+  }
+}
 // 🧠 MIT License: https://github.com/AllieBaig/LingoQuest/blob/main/LICENSE
 // 📅 Timestamp: 2025-05-30 14:45 | File: js/main.js
 
