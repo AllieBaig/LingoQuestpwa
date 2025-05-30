@@ -11,6 +11,7 @@ import { applyUIMode } from './utils/uiModeManager.js';
 import { loadUserProfile } from '../tools/profileManager.js';
 import { initVersionDisplay } from './utils/version.js';
 import { updateXPDisplay } from './utils/xpTracker.js';
+import { initStaticThemeSwitcher } from './utils/myTheme.js';
 
 
 function startMixLingoMode() {
