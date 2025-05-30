@@ -92,3 +92,30 @@ select {
     font-size: 1rem;
   }
 }
+
+
+/* -------------------------------------------------------
+   Responsive Button Size Classes (Toggle via JS or select)
+-------------------------------------------------------- */
+body.btn-md button {
+  font-size: 1rem;
+  padding: 0.6em 1.2em;
+}
+
+body.btn-lg button {
+  font-size: 1.15rem;
+  padding: 0.75em 1.4em;
+}
+
+body.btn-xl button {
+  font-size: 1.3rem;
+  padding: 0.85em 1.6em;
+}
+
+body.btn-xxl button {
+  font-size: 1.5rem;
+  padding: 1em 1.8em;
+}
+
+
+
