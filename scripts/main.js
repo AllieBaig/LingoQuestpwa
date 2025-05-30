@@ -13,6 +13,9 @@ import { updateXPDisplay } from './utils/xpTracker.js';
 import { renderGameMenu } from './utils/menuRenderer.js';
 import { initGameSwitchListener } from './utils/gameSwitchHandler.js';
 import { attachBackToMenuListener } from '../utils/menuBackHandler.js';
+import { applyThemeFromSelector } from './utils/themeManager.js';
+
+
 
 // Read URL parameters
 const params = new URLSearchParams(location.search);
@@ -28,7 +31,8 @@ if (!mode) {
   updateXPDisplay();
   initGameSwitchListener();
   attachBackToMenuListener();
-  initButtonSizeToggle();  // ✅ call here
+  applyThemeFromSelector(); // adds listener and sets saved theme
+  initButtonSizeToggle(); // ✅ call here
 }
 
 // ✅ Moved outside of block
