@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>LingoQuestPWA</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" type="image/svg+xml" href="icons/favicon.svg" />
+  <link rel="stylesheet" href="styles/responsive.css" />
+  <link rel="stylesheet" href="styles/variables.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/minimal-ui.css" />
+</head>
+<body class="minimal-ui">
+
+  <!-- ✅ Header UI Controls -->
+  <header id="uiControls">
+    <span id="userNickname">👤 Player</span>
+
+    <select id="buttonSizeToggle" title="Button Size">
+      <option value="md">🔲 Classic</option>
+      <option value="lg">🟦 Large</option>
+      <option value="xl">🟥 Extra Large</option>
+      <option value="xxl">🧱 Extra Very Large</option>
+    </select>
+
+    <label for="themeSelector" class="sr-only">Theme</label>
+    <select id="themeSelector" name="themeSelector" aria-label="Theme">
+      <option disabled selected>🎨 Choose Theme</option>
+      <option value="windows98">💾 Windows 98</option>
+      <option value="windowsxp">🪟 Windows XP</option>
+      <option value="android">🤖 Android</option>
+      <option value="ios">🍏 iOS</option>
+      <option value="redhat">🎩 Red Hat</option>
+      <option value="ubuntu">🔥 Ubuntu</option>
+    </select>
+
+    <button id="darkModeToggle" title="Toggle Dark Mode">🌓</button>
+  </header>
+
+  <!-- ✅ Game Area -->
+  <main id="gameArea">
+    <!-- 1st container: clue -->
+    <div id="sentenceClue"></div>
+
+    <!-- 2nd container: word builder -->
+    <div id="sentenceBuilderArea"></div>
+
+    <!-- 2.5th container: wrapped submit button -->
+    <div id="submitWrapper" style="display: none;">
+      <button id="submitSentence" class="game-btn">✅ Submit Answer</button>
+    </div>
+
+    <!-- 3rd container: result -->
+    <div id="resultSummary"></div>
+
+    <!-- ✅ Game Menu Buttons -->
+    <div id="gameMenu" class="menu-buttons">
+      <button id="btnMixLingo" class="game-btn">🌍 MixLingo</button>
+      <button id="btnWordRelic" class="game-btn">🧩 Word Relic</button>
+      <button id="btnWordSafari" class="game-btn">🦁 Word Safari</button>
+      <button id="btnNAPT" class="game-btn">📚 Napt Mode</button>
+      <button id="btnTrail" class="game-btn">🏞️ Trail of Letters</button>
+    </div>
+
+    <!-- ✅ Back to Menu Button (rendered via uiFooter) -->
+    <div id="backToMenuContainer" style="text-align:center; margin:1rem 0;"></div>
+  </main>
+
+  <!-- ✅ Footer (rendered dynamically) -->
+  <footer id="xpTracker"></footer>
+
+  <!-- ✅ App Bootstrap -->
+  <script type="module" src="scripts/main.js"></script>
+</body>
+</html>
