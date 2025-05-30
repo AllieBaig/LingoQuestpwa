@@ -12,7 +12,7 @@ import { initVersionDisplay } from './utils/version.js';
 import { updateXPDisplay } from './utils/xpTracker.js';
 import { renderGameMenu } from './utils/menuRenderer.js';
 import { initGameSwitchListener } from './utils/gameSwitchHandler.js';
-
+import { attachBackToMenuListener } from '../utils/menuBackHandler.js';
 
 // Read URL parameters
 const params = new URLSearchParams(location.search);
@@ -27,6 +27,7 @@ if (!mode) {
   initVersionDisplay();
   updateXPDisplay();
   initGameSwitchListener();
+  attachBackToMenuListener();
   
 }
 
