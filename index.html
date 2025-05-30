@@ -10,15 +10,13 @@
   <link rel="stylesheet" href="styles/variables.css" />
   <link rel="stylesheet" href="styles/main.css" />
   <link rel="stylesheet" href="styles/minimal-ui.css" />
-  <link rel="stylesheet" href="styles/ascii-ui.css" />
 </head>
-<body class="minimal-ui ascii-ui ascii-color-default">
+<body class="minimal-ui">
 
-  <!-- ✅ Top Controls UI Header (inserted via uiHeader.js if needed) -->
-  <header id="uiControls" class="ascii-ui-header">
+  <!-- ✅ Top Controls UI Header (temporary static version) -->
+  <header id="uiControls">
     <span id="userNickname">👤 Player</span>
 
-    <!-- Optional buttons from shared header -->
     <select id="buttonSizeToggle" title="Button Size">
       <option value="md">🔲 Classic</option>
       <option value="lg">🟦 Large</option>
@@ -38,37 +36,16 @@
     </select>
 
     <button id="darkModeToggle" title="Toggle Dark Mode">🌓</button>
-    <div id="asciiSettingsToggle" style="cursor:pointer;">☰</div>
   </header>
-
-  <!-- ✅ ASCII settings panel -->
-  <div id="asciiSettingsPanel" hidden>
-    <label for="asciiColorToggle">🎨 ASCII Text Theme:</label>
-    <select id="asciiColorToggle" title="ASCII Text Theme">
-      <option value="default">◼ Classic</option>
-      <option value="green">🟢 Matrix Green</option>
-      <option value="amber">🟠 Amber Glow</option>
-      <option value="blue">🔵 Blue Tint</option>
-      <option value="gray">⚪ Neutral Gray</option>
-    </select>
-
-    <label for="asciiEmojiModeToggle">🎭 ASCII Emoji Mode:</label>
-    <select id="asciiEmojiModeToggle" title="ASCII Emoji Mode">
-      <option value="emoji">Emoji Mode</option>
-      <option value="pure">Pure B/W Mode</option>
-    </select>
-  </div>
 
   <!-- ✅ Game Area -->
   <main id="gameArea">
-    <pre id="asciiOutput" class="ascii-only" hidden></pre>
-
     <div id="sentenceClue"></div>
     <div id="sentenceBuilderArea"></div>
     <button id="submitSentence" class="game-btn">✅ Submit Answer</button>
     <div id="resultSummary"></div>
 
-    <!-- ✅ Game Buttons -->
+    <!-- ✅ Game Menu Buttons -->
     <div id="gameMenu" class="menu-buttons">
       <button id="btnMixLingo" class="game-btn">🌍 MixLingo</button>
       <button id="btnWordRelic" class="game-btn">🧩 Word Relic</button>
@@ -77,16 +54,16 @@
       <button id="btnTrail" class="game-btn">🏞️ Trail of Letters</button>
     </div>
 
-    <!-- ✅ Back to Menu button -->
+    <!-- ✅ Back to Menu -->
     <div style="text-align:center; margin:1rem 0;">
       <button id="backToMenu" class="back-button">⬅️ Back to Menu</button>
     </div>
 
-    <!-- ✅ Footer XP Tracker -->
+    <!-- ✅ Footer -->
     <footer id="xpTracker"></footer>
   </main>
 
-  <!-- ✅ App Bootstrap -->
+  <!-- ✅ App Entry -->
   <script type="module" src="scripts/main.js"></script>
 </body>
 </html>
