@@ -12,6 +12,8 @@
 import { loadQuestionsForMode } from '../utils/questionPool.js';
 import { setupMCQ } from '../utils/mcqAutoCheck.js';
 import { awardXP } from '../utils/xpTracker.js';
+import { renderResult as renderSummary } from '../../utils/asciiRenderer.js';
+
 
 export async function initWordRelic(lang = 'fr') {
   const clueEl = document.querySelector('#sentenceClue');
