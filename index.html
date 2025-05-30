@@ -13,7 +13,7 @@
 </head>
 <body class="minimal-ui">
 
-  <!-- ✅ Top Controls UI Header (temporary static version) -->
+  <!-- ✅ Header UI Controls -->
   <header id="uiControls">
     <span id="userNickname">👤 Player</span>
 
@@ -34,16 +34,25 @@
       <option value="redhat">🎩 Red Hat</option>
       <option value="ubuntu">🔥 Ubuntu</option>
     </select>
-
-<!--    <button id="darkModeToggle" title="Toggle Dark Mode">🌓</button>
+<!--
+    <button id="darkModeToggle" title="Toggle Dark Mode">🌓</button>
   -->
   </header>
 
   <!-- ✅ Game Area -->
   <main id="gameArea">
+    <!-- 1st container: clue -->
     <div id="sentenceClue"></div>
+
+    <!-- 2nd container: word builder -->
     <div id="sentenceBuilderArea"></div>
-    <button id="submitSentence" class="game-btn">✅ Submit Answer</button>
+
+    <!-- 2.5th container: wrapped submit button -->
+    <div id="submitWrapper" style="display: none;">
+      <button id="submitSentence" class="game-btn">✅ Submit Answer</button>
+    </div>
+
+    <!-- 3rd container: result -->
     <div id="resultSummary"></div>
 
     <!-- ✅ Game Menu Buttons -->
@@ -55,17 +64,14 @@
       <button id="btnTrail" class="game-btn">🏞️ Trail of Letters</button>
     </div>
 
-    <!-- ✅ Back to Menu -->
-    <div style="text-align:center; margin:1rem 0;">
-      <!-- <button id="backToMenu" class="back-button">⬅️ Back to Menu</button>
-    -->
-    </div>
-
-    <!-- ✅ Footer -->
-    <footer id="xpTracker"></footer>
+    <!-- ✅ Back to Menu Button (rendered via uiFooter) -->
+    <div id="backToMenuContainer" style="text-align:center; margin:1rem 0;"></div>
   </main>
 
-  <!-- ✅ App Entry -->
+  <!-- ✅ Footer (rendered dynamically) -->
+  <footer id="xpTracker"></footer>
+
+  <!-- ✅ App Bootstrap -->
   <script type="module" src="scripts/main.js"></script>
 </body>
 </html>
