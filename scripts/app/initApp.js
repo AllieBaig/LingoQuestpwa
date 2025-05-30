@@ -15,6 +15,7 @@ import { initGameSwitchListener } from '../utils/gameSwitchHandler.js';
 import { attachBackToMenuListener } from '../utils/menuBackHandler.js';
 import { initButtonSizeToggle } from '../utils/buttonScaler.js';
 import { logEvent } from '../../tools/eventLogger.js';
+import { applyThemeFromSelector } from '../utils/themeManager.js';
 
 
 export function initAppMenuUI() {
@@ -27,6 +28,7 @@ export function initAppMenuUI() {
   attachBackToMenuListener();
   initButtonSizeToggle();
   attachEventLoggerToUI();
+  applyThemeFromSelector(); // ✅ This enables theme switching + saving
   
 }
 
