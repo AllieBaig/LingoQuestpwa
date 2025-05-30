@@ -134,3 +134,38 @@ body.minimal-ui.theme-bastille button:hover {
   background: var(--highlight-color);
   color: white;
 }
+
+/* Minimal UI Themes */
+body.minimal-ui.theme-w98 {
+  background-color: #c0c0c0;
+  color: #000080;
+}
+
+body.minimal-ui.theme-wxp {
+  background: linear-gradient(to bottom, #0078d7, #e6f1fb);
+  color: #ffffff;
+}
+
+body.minimal-ui.theme-android {
+  background-color: #a4c639;
+  color: #000;
+}
+
+body.minimal-ui.theme-ios {
+  background-color: #f9f9f9;
+  color: #111;
+}
+
+body.minimal-ui.theme-redhat {
+  background-color: #cc0000;
+  color: #fff;
+}
+
+body.minimal-ui.theme-ubuntu {
+  background-color: #dd4814;
+  color: #fff;
+}
+
+
+
+
