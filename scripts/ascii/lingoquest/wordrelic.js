@@ -7,6 +7,7 @@
 
 import { loadQuestionsForMode } from '../../utils/questionPool.js';
 import { renderClue, renderMCQ, renderSummary } from '../../utils/asciiRenderer.js';
+import { renderResult as renderSummary } from '../../utils/asciiRenderer.js';
 import { awardXP } from '../../utils/xpTracker.js';
 
 export async function initAsciiWordRelic(lang = 'fr') {
