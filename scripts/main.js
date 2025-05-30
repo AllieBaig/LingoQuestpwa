@@ -11,6 +11,36 @@ import { loadUserProfile } from '../tools/profileManager.js';
 import { initVersionDisplay } from './utils/version.js';
 import { updateXPDisplay } from './utils/xpTracker.js';
 
+
+function startMixLingoMode() {
+  import('./lingoquest/mixlingo.js').then(m => m.initMixLingo('en'));
+}
+
+function startWordRelicMode() {
+  import('./lingoquest/wordrelic.js').then(m => m.initWordRelic('en'));
+}
+
+function startWordSafariMode() {
+  import('./lingoquest/wordsafari.js').then(m => m.initWordSafari('en'));
+}
+
+function startNAPTMode() {
+  import('./lingoquest/napt.js').then(m => m.initNAPT('en'));
+}
+
+function startTrailMode() {
+  import('./lingoquest/trail.js').then(m => m.initTrail('en'));
+}
+
+function startVsComputerMode() {
+  import('./lingoquest/vscomputer.js').then(m => m.initVsComputer('en'));
+}
+
+function startNearbyMode() {
+  import('./lingoquest/nearby.js').then(m => m.initNearby('en'));
+}
+
+/*
 function startSoloMode() { console.log('Solo Mode placeholder'); }
 function startMixLingoMode() { console.log('MixLingo placeholder'); }
 function startWordRelicMode() { console.log('Word Relic placeholder'); }
@@ -19,7 +49,7 @@ function startNAPTMode() { console.log('NAPT placeholder'); }
 function startTrailMode() { console.log('Trail placeholder'); }
 function startVsComputerMode() { console.log('Vs Computer placeholder'); }
 function startNearbyMode() { console.log('Nearby Mode placeholder'); }
-
+*/
 
 
 
