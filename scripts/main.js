@@ -28,27 +28,9 @@ if (!mode) {
   updateXPDisplay();
   initGameSwitchListener();
   attachBackToMenuListener();
+  initButtonSizeToggle();
   
-  const sizeSelector = document.getElementById('buttonSizeToggle');
-
-  if (sizeSelector) {
-    // Load saved size preference
-    const savedSize = localStorage.getItem('btnSizePref');
-    if (savedSize) {
-      sizeSelector.value = savedSize;
-      applyButtonSize(savedSize);
-    }
-
-    // Listen for user change
-    sizeSelector.addEventListener('change', (e) => {
-      const newSize = e.target.value;
-      applyButtonSize(newSize);
-      localStorage.setItem('btnSizePref', newSize);
-    });
-  }
   
-}
-
 // 🔁 Apply button size globally using body class
 function applyButtonSize(size) {
   const validSizes = ['md', 'lg', 'xl', 'xxl'];
