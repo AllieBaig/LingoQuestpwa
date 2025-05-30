@@ -66,7 +66,7 @@ if (!mode) {
 // Button event listeners
 document.addEventListener('DOMContentLoaded', () => {
   const btnEvents = [
-    { id: 'btnSolo', handler: startSoloMode },
+    //{ id: 'btnSolo', handler: startSoloMode },
     { id: 'btnMixLingo', handler: startMixLingoMode },
     { id: 'btnWordRelic', handler: startWordRelicMode },
     { id: 'btnWordSafari', handler: startWordSafariMode },
