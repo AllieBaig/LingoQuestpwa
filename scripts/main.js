@@ -31,6 +31,28 @@ if (!mode) {
   
 }
 
+// 🧠 MIT License: https://github.com/AllieBaig/LingoQuest/blob/main/LICENSE
+// 📅 Timestamp: 2025-05-30 14:45 | File: js/main.js
+
+document.addEventListener('DOMContentLoaded', () => {
+  // --- Game Button Event Listeners ---
+  const btnEvents = [
+    { id: 'btnSolo', handler: startSoloMode },
+    { id: 'btnMixLingo', handler: startMixLingoMode },
+    { id: 'btnWordRelic', handler: startWordRelicMode },
+    { id: 'btnWordSafari', handler: startWordSafariMode },
+    { id: 'btnNAPT', handler: startNAPTMode },
+    { id: 'btnTrail', handler: startTrailMode },
+    { id: 'btnVsComputer', handler: startVsComputerMode },
+    { id: 'btnNearby', handler: startNearbyMode }
+  ];
+
+  btnEvents.forEach(({ id, handler }) => {
+    const btn = document.getElementById(id);
+    if (btn) btn.addEventListener('click', handler);
+  });
+});
+
 
 
 // Else: load mode
