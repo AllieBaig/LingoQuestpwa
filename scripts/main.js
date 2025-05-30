@@ -29,7 +29,36 @@ if (!mode) {
   initGameSwitchListener();
   attachBackToMenuListener();
   
+  const sizeSelector = document.getElementById('buttonSizeToggle');
+
+  if (sizeSelector) {
+    // Load saved size preference
+    const savedSize = localStorage.getItem('btnSizePref');
+    if (savedSize) {
+      sizeSelector.value = savedSize;
+      applyButtonSize(savedSize);
+    }
+
+    // Listen for user change
+    sizeSelector.addEventListener('change', (e) => {
+      const newSize = e.target.value;
+      applyButtonSize(newSize);
+      localStorage.setItem('btnSizePref', newSize);
+    });
+  }
+  
 }
+
+// 🔁 Apply button size globally using body class
+function applyButtonSize(size) {
+  const validSizes = ['md', 'lg', 'xl', 'xxl'];
+  document.body.classList.remove(...validSizes.map(s => `btn-${s}`));
+  if (validSizes.includes(size)) {
+    document.body.classList.add(`btn-${size}`);
+  }
+}
+
+  
 
 // 🧠 MIT License: https://github.com/AllieBaig/LingoQuest/blob/main/LICENSE
 // 📅 Timestamp: 2025-05-30 14:45 | File: js/main.js
