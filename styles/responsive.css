@@ -118,4 +118,17 @@ body.btn-xxl button {
 }
 
 
+body.btn-lg .mcq-option {
+  font-size: 1.15rem;
+}
+
+body.btn-xl .mcq-option {
+  font-size: 1.3rem;
+}
+
+body.btn-xxl .mcq-option {
+  font-size: 1.5rem;
+}
+
+
 
