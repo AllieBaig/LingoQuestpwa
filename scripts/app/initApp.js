@@ -26,6 +26,8 @@ export function initAppMenuUI() {
   initGameSwitchListener();
   attachBackToMenuListener();
   initButtonSizeToggle();
+  attachEventLoggerToUI();
+  
 }
 
 function attachEventLoggerToUI() {
