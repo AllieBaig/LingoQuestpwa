@@ -14,6 +14,8 @@ import { renderGameMenu } from '../utils/menuRenderer.js';
 import { initGameSwitchListener } from '../utils/gameSwitchHandler.js';
 import { attachBackToMenuListener } from '../utils/menuBackHandler.js';
 import { initButtonSizeToggle } from '../utils/buttonScaler.js';
+import { logEvent } from '../../tools/eventLogger.js';
+
 
 export function initAppMenuUI() {
   renderGameMenu();
@@ -25,3 +27,28 @@ export function initAppMenuUI() {
   attachBackToMenuListener();
   initButtonSizeToggle();
 }
+
+function attachEventLoggerToUI() {
+  // Log all button clicks
+  document.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      logEvent('button-click', btn.id || '(no-id)', {
+        text: btn.textContent.trim()
+      });
+    });
+  });
+
+  // Log all menu changes
+  document.querySelectorAll('select').forEach(sel => {
+    sel.addEventListener('change', (e) => {
+      logEvent('menu-change', sel.id || '(no-id)', {
+        value: e.target.value
+      });
+    });
+  });
+}
+
+
+
+
+
